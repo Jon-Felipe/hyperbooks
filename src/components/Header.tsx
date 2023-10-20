@@ -1,18 +1,16 @@
-// components
+// mui
 import AppBar from '@mui/material/AppBar';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
-import TextField from '@mui/material/TextField';
-import InputAdornment from '@mui/material/InputAdornment';
 import Avatar from '@mui/material/Avatar';
 import Chip from '@mui/material/Chip';
 import Badge from '@mui/material/Badge';
 import DarkModeOutlined from '@mui/icons-material/DarkModeOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import SearchIcon from '@mui/icons-material/Search';
 
 type Props = {};
 
@@ -27,33 +25,20 @@ function Header({}: Props) {
               flexGrow: { xs: 1, lg: 0 },
               color: '#0e1428',
               fontWeight: 'bold',
-              marginRight: { xs: 0, lg: 8 },
+              marginRight: { xs: 0, lg: 10 },
             }}
           >
             Hyper Books
           </Typography>
           <Box
-            component='form'
-            autoComplete='off'
-            sx={{ display: { xs: 'none', lg: 'flex' }, flexGrow: 1 }}
+            component='nav'
+            sx={{ display: { xs: 'none', lg: 'flex' }, columnGap: 4 }}
           >
-            <TextField
-              id='search'
-              placeholder='Search by title, author or name'
-              type='search'
-              variant='outlined'
-              size='small'
-              fullWidth
-              InputProps={{
-                startAdornment: (
-                  <InputAdornment position='end'>
-                    <SearchIcon />
-                  </InputAdornment>
-                ),
-              }}
-            />
+            <Button size='small'>Book Store</Button>
+            <Button size='small'>Wishlist</Button>
+            <Button size='small'>My Collection</Button>
           </Box>
-          <Box sx={{ flexGrow: { xs: 0, lg: 2 } }} />
+          <Box sx={{ flexGrow: 1 }} />
           <Box
             sx={{
               display: { xs: 'none', lg: 'flex' },
@@ -71,8 +56,8 @@ function Header({}: Props) {
             </IconButton>
           </Box>
           <Chip
-            avatar={<Avatar>JF</Avatar>}
-            label='Welcome JF'
+            avatar={<Avatar>JD</Avatar>}
+            label='Hi John Doe'
             variant='outlined'
             clickable
           />
