@@ -18,10 +18,10 @@ function BookGridView() {
         <Grid key={book.id} item xs={12} md={6}>
           <Card variant='outlined'>
             <CardContent>
-              <Typography variant='body1' component='h3' noWrap>
+              <Typography variant='body1' component='h3' noWrap gutterBottom>
                 {book.name}
               </Typography>
-              <Typography variant='body2' component='p'>
+              <Typography variant='body2' component='p' gutterBottom>
                 {book.category}
               </Typography>
               <Rating
@@ -30,7 +30,7 @@ function BookGridView() {
                 precision={0.5}
                 readOnly
               />
-              <Typography variant='caption' component='p'>
+              <Typography variant='caption' component='p' gutterBottom>
                 ${book.price.toFixed(2)}
               </Typography>
               <Button variant='outlined' size='small'>
