@@ -23,11 +23,20 @@ function Header({}: Props) {
         <Toolbar>
           <Typography
             variant='h5'
-            sx={{ color: '#0e1428', fontWeight: 'bold', mr: 8 }}
+            sx={{
+              flexGrow: { xs: 1, lg: 0 },
+              color: '#0e1428',
+              fontWeight: 'bold',
+              marginRight: { xs: 0, lg: 8 },
+            }}
           >
             Hyper Books
           </Typography>
-          <Box component='form' autoComplete='off' sx={{ flexGrow: 1 }}>
+          <Box
+            component='form'
+            autoComplete='off'
+            sx={{ display: { xs: 'none', lg: 'flex' }, flexGrow: 1 }}
+          >
             <TextField
               id='search'
               placeholder='Search by title, author or name'
@@ -44,8 +53,14 @@ function Header({}: Props) {
               }}
             />
           </Box>
-          <Box sx={{ flexGrow: 2 }} />
-          <Box sx={{ display: 'flex', alignItems: 'center', columnGap: 1 }}>
+          <Box sx={{ flexGrow: { xs: 0, lg: 2 } }} />
+          <Box
+            sx={{
+              display: { xs: 'none', lg: 'flex' },
+              columnGap: 1,
+              marginRight: 1,
+            }}
+          >
             <IconButton color='primary' sx={{ border: '1px solid #e8e9eb' }}>
               <DarkModeOutlined sx={{ color: '#0e1428' }} />
             </IconButton>
@@ -54,13 +69,13 @@ function Header({}: Props) {
                 <ShoppingCartOutlinedIcon sx={{ color: '#0e1428' }} />
               </Badge>
             </IconButton>
-            <Chip
-              avatar={<Avatar>JF</Avatar>}
-              label='Welcome JF'
-              variant='outlined'
-              clickable
-            />
           </Box>
+          <Chip
+            avatar={<Avatar>JF</Avatar>}
+            label='Welcome JF'
+            variant='outlined'
+            clickable
+          />
         </Toolbar>
       </Container>
     </AppBar>
