@@ -3,7 +3,7 @@ import { BookType } from './types';
 export const dummy_books: BookType[] = [
   {
     id: 1,
-    name: 'Work for Money, Design for Love',
+    title: 'Work for Money, Design for Love',
     image: '',
     category: 'Business & Money',
     rating: 5,
@@ -11,7 +11,7 @@ export const dummy_books: BookType[] = [
   },
   {
     id: 2,
-    name: 'Very Nice: A novel Marcy Dermansky',
+    title: 'Very Nice: A novel Marcy Dermansky',
     image: '',
     category: 'Literature & Fiction',
     rating: 4,
@@ -19,7 +19,7 @@ export const dummy_books: BookType[] = [
   },
   {
     id: 3,
-    name: 'The Psychology of Graphic Design Pricing',
+    title: 'The Psychology of Graphic Design Pricing',
     image: '',
     category: 'Graphic Design',
     rating: 1,
@@ -27,7 +27,7 @@ export const dummy_books: BookType[] = [
   },
   {
     id: 4,
-    name: 'Juliet the Maniac: A Novel',
+    title: 'Juliet the Maniac: A Novel',
     image: '',
     category: 'Literature & Fiction',
     rating: 3,
@@ -35,7 +35,7 @@ export const dummy_books: BookType[] = [
   },
   {
     id: 5,
-    name: 'Logo Design Love: A Guide to Creating Iconic Brand Identities',
+    title: 'Logo Design Love: A Guide to Creating Iconic Brand Identities',
     image: '',
     category: 'Graphic Design',
     rating: 5,
@@ -43,7 +43,7 @@ export const dummy_books: BookType[] = [
   },
   {
     id: 6,
-    name: 'Thinking with Type, 2nd revised and expanded',
+    title: 'Thinking with Type, 2nd revised and expanded',
     image: '',
     category: 'Graphic Design',
     rating: 2,
