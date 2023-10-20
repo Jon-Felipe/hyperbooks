@@ -73,3 +73,53 @@ export const popularBooks: BookCategoryType[] = [
     name: 'Parenting & families',
   },
 ];
+
+export const fictionBooks: BookCategoryType[] = [
+  {
+    id: 1,
+    name: 'Adult',
+  },
+  {
+    id: 2,
+    name: "Children's & Young",
+  },
+  {
+    id: 3,
+    name: 'General Fiction',
+  },
+  {
+    id: 4,
+    name: 'Literature & Fiction',
+  },
+];
+
+export const nonFictionBooks: BookCategoryType[] = [
+  {
+    id: 1,
+    name: 'Archaeology',
+  },
+  {
+    id: 2,
+    name: 'Architecture',
+  },
+  {
+    id: 3,
+    name: 'Business & Economics',
+  },
+  {
+    id: 4,
+    name: 'Politics & Social Sciences',
+  },
+  {
+    id: 5,
+    name: 'Current Events',
+  },
+  {
+    id: 6,
+    name: 'Self-Help',
+  },
+  {
+    id: 7,
+    name: 'Humor & Entertainment',
+  },
+];

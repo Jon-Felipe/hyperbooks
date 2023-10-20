@@ -7,7 +7,11 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
 // extras
-import { popularBooks } from '../utils/constants';
+import {
+  popularBooks,
+  fictionBooks,
+  nonFictionBooks,
+} from '../utils/constants';
 
 type Props = {};
 
@@ -50,12 +54,36 @@ function SideFilters({}: Props) {
         <Typography variant='h6' component='p'>
           Fiction
         </Typography>
+        {fictionBooks.map((book) => (
+          <Box key={book.id} sx={{ margin: '15px 0' }}>
+            <Typography
+              variant='body2'
+              component='button'
+              sx={{ bgcolor: 'transparent', border: 'none', cursor: 'pointer' }}
+              onClick={() => console.log('popular books')}
+            >
+              {book.name}
+            </Typography>
+          </Box>
+        ))}
       </Box>
       {/* Non-Fiction filter */}
       <Box sx={{ marginTop: '40px' }}>
         <Typography variant='h6' component='p'>
           Non-Fiction
         </Typography>
+        {nonFictionBooks.map((book) => (
+          <Box key={book.id} sx={{ margin: '15px 0' }}>
+            <Typography
+              variant='body2'
+              component='button'
+              sx={{ bgcolor: 'transparent', border: 'none', cursor: 'pointer' }}
+              onClick={() => console.log('popular books')}
+            >
+              {book.name}
+            </Typography>
+          </Box>
+        ))}
       </Box>
     </Paper>
   );
