@@ -20,7 +20,7 @@ function SideFilters({}: Props) {
     <Paper sx={{ padding: '20px' }}>
       {/* Search Filter */}
       <TextField
-        placeholder='Title, Author...'
+        placeholder='ISBN, Title, Author...'
         variant='standard'
         fullWidth
         InputProps={{
