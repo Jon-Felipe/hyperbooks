@@ -11,10 +11,10 @@ function HomeScreen({}: Props) {
   return (
     <>
       <Grid container spacing={2}>
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={3}>
           <SideFilters />
         </Grid>
-        <Grid item xs={12} md={8}>
+        <Grid item xs={12} md={9}>
           <BookGridView />
         </Grid>
       </Grid>
