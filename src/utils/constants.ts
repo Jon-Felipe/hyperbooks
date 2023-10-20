@@ -6,6 +6,7 @@ export const dummy_books: BookType[] = [
     name: 'Work for Money, Design for Love',
     image: '',
     category: 'Business & Money',
+    rating: 5,
     price: 22.0,
   },
   {
@@ -13,6 +14,7 @@ export const dummy_books: BookType[] = [
     name: 'Very Nice: A novel Marcy Dermansky',
     image: '',
     category: 'Literature & Fiction',
+    rating: 4,
     price: 18.9,
   },
   {
@@ -20,6 +22,7 @@ export const dummy_books: BookType[] = [
     name: 'The Psychology of Graphic Design Pricing',
     image: '',
     category: 'Graphic Design',
+    rating: 1,
     price: 20.59,
   },
   {
@@ -27,6 +30,7 @@ export const dummy_books: BookType[] = [
     name: 'Juliet the Maniac: A Novel',
     image: '',
     category: 'Literature & Fiction',
+    rating: 3,
     price: 9.99,
   },
   {
@@ -34,6 +38,7 @@ export const dummy_books: BookType[] = [
     name: 'Logo Design Love: A Guide to Creating Iconic Brand Identities',
     image: '',
     category: 'Graphic Design',
+    rating: 5,
     price: 24.91,
   },
   {
@@ -41,6 +46,7 @@ export const dummy_books: BookType[] = [
     name: 'Thinking with Type, 2nd revised and expanded',
     image: '',
     category: 'Graphic Design',
+    rating: 2,
     price: 12.04,
   },
 ];

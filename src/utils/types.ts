@@ -3,5 +3,6 @@ export type BookType = {
   name: string;
   image: string;
   category: string;
+  rating: number;
   price: number;
 };
