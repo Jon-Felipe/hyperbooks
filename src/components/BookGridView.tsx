@@ -3,6 +3,7 @@ import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
+import Rating from '@mui/material/Rating';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
@@ -23,6 +24,12 @@ function BookGridView() {
               <Typography variant='body2' component='p'>
                 {book.category}
               </Typography>
+              <Rating
+                value={book.rating}
+                size='small'
+                precision={0.5}
+                readOnly
+              />
               <Typography variant='caption' component='p'>
                 ${book.price.toFixed(2)}
               </Typography>
