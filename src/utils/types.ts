@@ -6,3 +6,8 @@ export type BookType = {
   rating: number;
   price: number;
 };
+
+export type BookCategoryType = {
+  id: number;
+  name: string;
+};

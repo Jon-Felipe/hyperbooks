@@ -1,4 +1,4 @@
-import { BookType } from './types';
+import { BookCategoryType, BookType } from './types';
 
 export const dummy_books: BookType[] = [
   {
@@ -48,5 +48,28 @@ export const dummy_books: BookType[] = [
     category: 'Graphic Design',
     rating: 2,
     price: 12.04,
+  },
+];
+
+export const popularBooks: BookCategoryType[] = [
+  {
+    id: 1,
+    name: 'Biographies & memoirs',
+  },
+  {
+    id: 2,
+    name: 'Business & Money',
+  },
+  {
+    id: 3,
+    name: "Children's books",
+  },
+  {
+    id: 4,
+    name: 'Computers & technology',
+  },
+  {
+    id: 5,
+    name: 'Parenting & families',
   },
 ];
