@@ -1,6 +1,7 @@
 // components
 import SideFilters from '../components/SideFilters';
-import BookGridView from '../components/BookGridView';
+// import BookGridView from '../components/BookGridView';
+import BookListView from '../components/BookListView';
 import ToggleListButtons from '../components/ToggleListButtons';
 
 // mui
@@ -26,7 +27,7 @@ function HomeScreen({}: Props) {
           >
             <ToggleListButtons />
           </Box>
-          <BookGridView />
+          <BookListView />
         </Grid>
       </Grid>
     </>
