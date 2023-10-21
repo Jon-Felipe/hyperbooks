@@ -1,14 +1,11 @@
 // components
 import SideFilters from '../components/SideFilters';
 import BookGridView from '../components/BookGridView';
+import ToggleListButtons from '../components/ToggleListButtons';
 
 // mui
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
-import ToggleButton from '@mui/material/ToggleButton';
-import GridViewRoundedIcon from '@mui/icons-material/GridViewRounded';
-import MenuIcon from '@mui/icons-material/Menu';
 
 type Props = {};
 
@@ -27,14 +24,7 @@ function HomeScreen({}: Props) {
               marginBottom: '20px',
             }}
           >
-            <ToggleButtonGroup>
-              <ToggleButton value={''}>
-                <GridViewRoundedIcon />
-              </ToggleButton>
-              <ToggleButton value={''}>
-                <MenuIcon />
-              </ToggleButton>
-            </ToggleButtonGroup>
+            <ToggleListButtons />
           </Box>
           <BookGridView />
         </Grid>
