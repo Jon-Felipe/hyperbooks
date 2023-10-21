@@ -19,7 +19,7 @@ function BookGridView() {
           <Card variant='outlined'>
             <CardContent>
               <Typography variant='body1' component='h3' noWrap gutterBottom>
-                {book.name}
+                {book.title}
               </Typography>
               <Typography variant='body2' component='p' gutterBottom>
                 {book.category}
