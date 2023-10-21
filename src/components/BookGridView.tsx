@@ -26,10 +26,27 @@ function BookGridView() {
               alt={book.title}
             />
             <CardContent>
-              <Typography variant='body1' component='h3' gutterBottom>
+              <Typography
+                variant='h6'
+                component='h3'
+                gutterBottom
+                sx={{
+                  fontSize: '16px',
+                  fontWeight: 'bold',
+                  letterSpacing: '1px',
+                }}
+              >
                 {book.title}
               </Typography>
-              <Typography variant='body2' component='p' gutterBottom>
+              <Typography
+                variant='body2'
+                component='p'
+                gutterBottom
+                sx={{
+                  color: '#6c757d',
+                  fontSize: '12px',
+                }}
+              >
                 {book.category}
               </Typography>
               <Rating
@@ -38,7 +55,16 @@ function BookGridView() {
                 precision={0.5}
                 readOnly
               />
-              <Typography variant='caption' component='p' gutterBottom>
+              <Typography
+                variant='caption'
+                component='p'
+                sx={{
+                  fontSize: '14px',
+                  fontWeight: 'bold',
+                  color: '#38b000',
+                  margin: '5px 0',
+                }}
+              >
                 ${book.price.toFixed(2)}
               </Typography>
               <Button variant='outlined' size='small'>
