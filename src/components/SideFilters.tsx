@@ -37,7 +37,11 @@ function SideFilters({}: Props) {
       {/* Popular filter */}
       <Accordion sx={{ margin: '20px 0' }}>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography variant='h6' component='p'>
+          <Typography
+            variant='h6'
+            component='h3'
+            sx={{ fontSize: '18px', fontWeight: 'bold', letterSpacing: '1px' }}
+          >
             Popular Books
           </Typography>
         </AccordionSummary>
@@ -52,6 +56,9 @@ function SideFilters({}: Props) {
                 bgcolor: 'transparent',
                 border: 'none',
                 cursor: 'pointer',
+                color: '#6c757d',
+                letterSpacing: '1px',
+                margin: '5px 0',
               }}
               onClick={() => console.log('popular books')}
             >
@@ -63,7 +70,11 @@ function SideFilters({}: Props) {
       {/* Fiction filter */}
       <Accordion>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography variant='h6' component='p'>
+          <Typography
+            variant='h6'
+            component='h3'
+            sx={{ fontSize: '18px', fontWeight: 'bold', letterSpacing: '1px' }}
+          >
             Fiction
           </Typography>
         </AccordionSummary>
@@ -78,6 +89,9 @@ function SideFilters({}: Props) {
                 bgcolor: 'transparent',
                 border: 'none',
                 cursor: 'pointer',
+                color: '#6c757d',
+                letterSpacing: '1px',
+                margin: '5px 0',
               }}
               onClick={() => console.log('popular books')}
             >
@@ -89,7 +103,11 @@ function SideFilters({}: Props) {
       {/* Non-Fiction filter */}
       <Accordion sx={{ marginTop: '20px' }}>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography variant='h6' component='p'>
+          <Typography
+            variant='h6'
+            component='h3'
+            sx={{ fontSize: '18px', fontWeight: 'bold', letterSpacing: '1px' }}
+          >
             Non-Fiction
           </Typography>
         </AccordionSummary>
@@ -104,6 +122,9 @@ function SideFilters({}: Props) {
                 bgcolor: 'transparent',
                 border: 'none',
                 cursor: 'pointer',
+                color: '#6c757d',
+                letterSpacing: '1px',
+                margin: '5px 0',
               }}
               onClick={() => console.log('popular books')}
             >
