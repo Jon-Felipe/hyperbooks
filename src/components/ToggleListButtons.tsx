@@ -1,17 +1,24 @@
+// mui
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import ToggleButton from '@mui/material/ToggleButton';
 import GridViewRoundedIcon from '@mui/icons-material/GridViewRounded';
 import MenuIcon from '@mui/icons-material/Menu';
 
-type Props = {};
+type Props = {
+  value: string;
+  onChange: (
+    event: React.MouseEvent<HTMLElement, MouseEvent>,
+    value: string
+  ) => void;
+};
 
-function ToggleListButtons({}: Props) {
+function ToggleListButtons({ value, onChange }: Props) {
   return (
-    <ToggleButtonGroup>
-      <ToggleButton value={''}>
+    <ToggleButtonGroup value={value} exclusive onChange={onChange}>
+      <ToggleButton value='grid'>
         <GridViewRoundedIcon />
       </ToggleButton>
-      <ToggleButton value={''}>
+      <ToggleButton value='list'>
         <MenuIcon />
       </ToggleButton>
     </ToggleButtonGroup>

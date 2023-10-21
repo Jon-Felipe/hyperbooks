@@ -1,6 +1,8 @@
+import { useState } from 'react';
+
 // components
 import SideFilters from '../components/SideFilters';
-// import BookGridView from '../components/BookGridView';
+import BookGridView from '../components/BookGridView';
 import BookListView from '../components/BookListView';
 import ToggleListButtons from '../components/ToggleListButtons';
 
@@ -8,9 +10,18 @@ import ToggleListButtons from '../components/ToggleListButtons';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 
-type Props = {};
+function HomeScreen() {
+  const [bookView, setBookView] = useState<string>('grid');
 
-function HomeScreen({}: Props) {
+  const handleOnToggleBookViewChange = (
+    e: React.MouseEvent<HTMLElement>,
+    newBookView: string
+  ) => {
+    if (newBookView !== null) {
+      setBookView(newBookView);
+    }
+  };
+
   return (
     <>
       <Grid container spacing={2}>
@@ -25,9 +36,16 @@ function HomeScreen({}: Props) {
               marginBottom: '20px',
             }}
           >
-            <ToggleListButtons />
+            <ToggleListButtons
+              value={bookView}
+              onChange={handleOnToggleBookViewChange}
+            />
           </Box>
-          <BookListView />
+          {bookView == 'grid' ? (
+            <BookGridView />
+          ) : (
+            bookView == 'list' && <BookListView />
+          )}
         </Grid>
       </Grid>
     </>
