@@ -1,5 +1,4 @@
-// screens
-import HomeScreen from './screens/HomeScreen';
+import { Outlet } from 'react-router-dom';
 
 // components
 import Header from './components/Header';
@@ -12,7 +11,7 @@ function App() {
     <>
       <Header />
       <Container component='main' maxWidth='xl' sx={{ marginTop: '20px' }}>
-        <HomeScreen />
+        <Outlet />
       </Container>
     </>
   );
