@@ -11,11 +11,13 @@ import {
 
 // pages
 import HomeScreen from './screens/HomeScreen.tsx';
+import BookScreen from './screens/BookScreen.tsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />}>
       <Route index={true} path='/' element={<HomeScreen />} />
+      <Route path='/book/:id' element={<BookScreen />} />
     </Route>
   )
 );
