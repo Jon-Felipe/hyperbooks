@@ -15,6 +15,8 @@ export const dummy_books: BookType[] = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consectetur facilis adipisci nihil commodi voluptate odio animi incidunt numquam repellendus cum fugiat, aut amet modi esse veritatis earum obcaecati. Repudiandae harum vel sint deleniti perferendis.',
     language: ['English', 'Spanish', 'Portuguese', 'Italian'],
     publicationDate: '23 Nov 2023',
+    vendor: 'Thriftbooks',
+    countInStock: 29,
   },
   {
     id: 2,
@@ -30,6 +32,8 @@ export const dummy_books: BookType[] = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consectetur facilis adipisci nihil commodi voluptate odio animi incidunt numquam repellendus cum fugiat, aut amet modi esse veritatis earum obcaecati. Repudiandae harum vel sint deleniti perferendis.',
     language: ['English', 'Spanish', 'Portuguese', 'Italian'],
     publicationDate: '23 Nov 2023',
+    vendor: 'Thriftbooks',
+    countInStock: 29,
   },
   {
     id: 3,
@@ -45,6 +49,8 @@ export const dummy_books: BookType[] = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consectetur facilis adipisci nihil commodi voluptate odio animi incidunt numquam repellendus cum fugiat, aut amet modi esse veritatis earum obcaecati. Repudiandae harum vel sint deleniti perferendis.',
     language: ['English', 'Spanish', 'Portuguese', 'Italian'],
     publicationDate: '23 Nov 2023',
+    vendor: 'Thriftbooks',
+    countInStock: 29,
   },
   {
     id: 4,
@@ -60,6 +66,8 @@ export const dummy_books: BookType[] = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consectetur facilis adipisci nihil commodi voluptate odio animi incidunt numquam repellendus cum fugiat, aut amet modi esse veritatis earum obcaecati. Repudiandae harum vel sint deleniti perferendis.',
     language: ['English', 'Spanish', 'Portuguese', 'Italian'],
     publicationDate: '23 Nov 2023',
+    vendor: 'Thriftbooks',
+    countInStock: 29,
   },
   {
     id: 5,
@@ -75,6 +83,8 @@ export const dummy_books: BookType[] = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consectetur facilis adipisci nihil commodi voluptate odio animi incidunt numquam repellendus cum fugiat, aut amet modi esse veritatis earum obcaecati. Repudiandae harum vel sint deleniti perferendis.',
     language: ['English', 'Spanish', 'Portuguese', 'Italian'],
     publicationDate: '23 Nov 2023',
+    vendor: 'Thriftbooks',
+    countInStock: 29,
   },
   {
     id: 6,
@@ -90,6 +100,8 @@ export const dummy_books: BookType[] = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consectetur facilis adipisci nihil commodi voluptate odio animi incidunt numquam repellendus cum fugiat, aut amet modi esse veritatis earum obcaecati. Repudiandae harum vel sint deleniti perferendis.',
     language: ['English', 'Spanish', 'Portuguese', 'Italian'],
     publicationDate: '23 Nov 2023',
+    vendor: 'Thriftbooks',
+    countInStock: 29,
   },
 ];
 
