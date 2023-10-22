@@ -14,7 +14,7 @@ type Props = {
 
 function ToggleListButtons({ value, onChange }: Props) {
   return (
-    <ToggleButtonGroup value={value} exclusive onChange={onChange}>
+    <ToggleButtonGroup value={value} exclusive size='small' onChange={onChange}>
       <ToggleButton value='grid'>
         <GridViewRoundedIcon />
       </ToggleButton>
