@@ -1,3 +1,5 @@
+import { Link as RouterLink } from 'react-router-dom';
+
 // mui
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
@@ -8,6 +10,8 @@ import Rating from '@mui/material/Rating';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import Link from '@mui/material/Link';
+import Box from '@mui/material/Box';
 
 // extra
 import { dummy_books } from '../utils/constants';
@@ -72,12 +76,21 @@ function BookListView({}: Props) {
               >
                 ${book.price.toFixed(2)}
               </Typography>
-              <Button variant='outlined' size='medium'>
-                Add To Cart
-              </Button>
-              <IconButton size='medium' sx={{ ml: 1 }}>
-                <FavoriteBorderOutlinedIcon fontSize='medium' />
-              </IconButton>
+              <Box
+                sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  columnGap: '15px',
+                }}
+              >
+                <Button variant='outlined'>Add To Cart</Button>
+                <Link component={RouterLink} to={`/book/${book.id}`}>
+                  View Book
+                </Link>
+                <IconButton>
+                  <FavoriteBorderOutlinedIcon />
+                </IconButton>
+              </Box>
             </CardContent>
           </Card>
         </Grid>
