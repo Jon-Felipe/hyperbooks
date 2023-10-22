@@ -10,6 +10,8 @@ export type BookType = {
   authorDetails: string;
   language: string[];
   publicationDate: string;
+  vendor: string;
+  countInStock: number;
 };
 
 export type BookCategoryType = {
