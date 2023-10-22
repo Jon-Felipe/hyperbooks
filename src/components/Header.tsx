@@ -1,16 +1,18 @@
+import { Link as RouterLink } from 'react-router-dom';
+
 // mui
 import AppBar from '@mui/material/AppBar';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import Avatar from '@mui/material/Avatar';
 import Chip from '@mui/material/Chip';
 import Badge from '@mui/material/Badge';
 import DarkModeOutlined from '@mui/icons-material/DarkModeOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import Link from '@mui/material/Link';
 
 type Props = {};
 
@@ -34,9 +36,15 @@ function Header({}: Props) {
             component='nav'
             sx={{ display: { xs: 'none', lg: 'flex' }, columnGap: 4 }}
           >
-            <Button size='small'>Book Store</Button>
-            <Button size='small'>Wishlist</Button>
-            <Button size='small'>My Collection</Button>
+            <Link component={RouterLink} to='/' underline='none'>
+              Book Store
+            </Link>
+            <Link component={RouterLink} to='/' underline='none'>
+              Wishlist
+            </Link>
+            <Link component={RouterLink} to='/' underline='none'>
+              My Collection
+            </Link>
           </Box>
           <Box sx={{ flexGrow: 1 }} />
           <Box
