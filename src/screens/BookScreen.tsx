@@ -37,6 +37,16 @@ function BookScreen({}: Props) {
           readOnly
           size='large'
         />
+        <Typography
+          component='p'
+          variant='subtitle2'
+          sx={{ letterSpacing: '1px', margin: '10px 0' }}
+        >
+          About the Author: {foundBook?.authorDetails}
+        </Typography>
+        <Typography component='p' variant='h5'>
+          ${foundBook?.price.toFixed(2)}
+        </Typography>
       </Grid>
     </Grid>
   );

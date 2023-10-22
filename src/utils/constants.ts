@@ -12,7 +12,7 @@ export const dummy_books: BookType[] = [
     price: 22.0,
     author: 'John Doe',
     authorDetails:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consectetur facilis adipisci nihil commodi voluptate odio animi incidunt numquam repellendus cum fugiat, aut amet modi esse veritatis earum obcaecati. Repudiandae harum vel sint deleniti perferendis, in facere corporis doloribus officia culpa aliquam voluptate quas ducimus minus commodi, iusto quo? Assumenda?',
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consectetur facilis adipisci nihil commodi voluptate odio animi incidunt numquam repellendus cum fugiat, aut amet modi esse veritatis earum obcaecati. Repudiandae harum vel sint deleniti perferendis.',
     language: ['English', 'Spanish', 'Portuguese', 'Italian'],
     publicationDate: '23 Nov 2023',
   },
@@ -27,7 +27,7 @@ export const dummy_books: BookType[] = [
     price: 18.9,
     author: 'John Doe',
     authorDetails:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consectetur facilis adipisci nihil commodi voluptate odio animi incidunt numquam repellendus cum fugiat, aut amet modi esse veritatis earum obcaecati. Repudiandae harum vel sint deleniti perferendis, in facere corporis doloribus officia culpa aliquam voluptate quas ducimus minus commodi, iusto quo? Assumenda?',
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consectetur facilis adipisci nihil commodi voluptate odio animi incidunt numquam repellendus cum fugiat, aut amet modi esse veritatis earum obcaecati. Repudiandae harum vel sint deleniti perferendis.',
     language: ['English', 'Spanish', 'Portuguese', 'Italian'],
     publicationDate: '23 Nov 2023',
   },
@@ -42,7 +42,7 @@ export const dummy_books: BookType[] = [
     price: 20.59,
     author: 'John Doe',
     authorDetails:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consectetur facilis adipisci nihil commodi voluptate odio animi incidunt numquam repellendus cum fugiat, aut amet modi esse veritatis earum obcaecati. Repudiandae harum vel sint deleniti perferendis, in facere corporis doloribus officia culpa aliquam voluptate quas ducimus minus commodi, iusto quo? Assumenda?',
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consectetur facilis adipisci nihil commodi voluptate odio animi incidunt numquam repellendus cum fugiat, aut amet modi esse veritatis earum obcaecati. Repudiandae harum vel sint deleniti perferendis.',
     language: ['English', 'Spanish', 'Portuguese', 'Italian'],
     publicationDate: '23 Nov 2023',
   },
@@ -57,7 +57,7 @@ export const dummy_books: BookType[] = [
     price: 9.99,
     author: 'John Doe',
     authorDetails:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consectetur facilis adipisci nihil commodi voluptate odio animi incidunt numquam repellendus cum fugiat, aut amet modi esse veritatis earum obcaecati. Repudiandae harum vel sint deleniti perferendis, in facere corporis doloribus officia culpa aliquam voluptate quas ducimus minus commodi, iusto quo? Assumenda?',
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consectetur facilis adipisci nihil commodi voluptate odio animi incidunt numquam repellendus cum fugiat, aut amet modi esse veritatis earum obcaecati. Repudiandae harum vel sint deleniti perferendis.',
     language: ['English', 'Spanish', 'Portuguese', 'Italian'],
     publicationDate: '23 Nov 2023',
   },
@@ -72,7 +72,7 @@ export const dummy_books: BookType[] = [
     price: 24.91,
     author: 'John Doe',
     authorDetails:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consectetur facilis adipisci nihil commodi voluptate odio animi incidunt numquam repellendus cum fugiat, aut amet modi esse veritatis earum obcaecati. Repudiandae harum vel sint deleniti perferendis, in facere corporis doloribus officia culpa aliquam voluptate quas ducimus minus commodi, iusto quo? Assumenda?',
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consectetur facilis adipisci nihil commodi voluptate odio animi incidunt numquam repellendus cum fugiat, aut amet modi esse veritatis earum obcaecati. Repudiandae harum vel sint deleniti perferendis.',
     language: ['English', 'Spanish', 'Portuguese', 'Italian'],
     publicationDate: '23 Nov 2023',
   },
@@ -87,7 +87,7 @@ export const dummy_books: BookType[] = [
     price: 12.04,
     author: 'John Doe',
     authorDetails:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consectetur facilis adipisci nihil commodi voluptate odio animi incidunt numquam repellendus cum fugiat, aut amet modi esse veritatis earum obcaecati. Repudiandae harum vel sint deleniti perferendis, in facere corporis doloribus officia culpa aliquam voluptate quas ducimus minus commodi, iusto quo? Assumenda?',
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consectetur facilis adipisci nihil commodi voluptate odio animi incidunt numquam repellendus cum fugiat, aut amet modi esse veritatis earum obcaecati. Repudiandae harum vel sint deleniti perferendis.',
     language: ['English', 'Spanish', 'Portuguese', 'Italian'],
     publicationDate: '23 Nov 2023',
   },
