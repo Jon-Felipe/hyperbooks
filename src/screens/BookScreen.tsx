@@ -5,6 +5,9 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Rating from '@mui/material/Rating';
+import Button from '@mui/material/Button';
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
 
 // extras
 import { dummy_books } from '../utils/constants';
@@ -39,7 +42,7 @@ function BookScreen({}: Props) {
         />
         <Typography
           component='p'
-          variant='subtitle2'
+          variant='body2'
           sx={{ letterSpacing: '1px', margin: '10px 0' }}
         >
           About the Author: {foundBook?.authorDetails}
@@ -47,6 +50,79 @@ function BookScreen({}: Props) {
         <Typography component='p' variant='h5'>
           ${foundBook?.price.toFixed(2)}
         </Typography>
+        <Grid container spacing={2} sx={{ marginTop: '10px' }}>
+          {/* vendor */}
+          <Grid item md={3}>
+            <Typography
+              component='h3'
+              variant='body1'
+              sx={{ fontWeight: 'bold' }}
+            >
+              Vendor:{' '}
+            </Typography>
+          </Grid>
+          <Grid item md={9}>
+            <Typography>{foundBook?.vendor}</Typography>
+          </Grid>
+          {/* category */}
+          <Grid item md={3}>
+            <Typography
+              component='h3'
+              variant='body1'
+              sx={{ fontWeight: 'bold' }}
+            >
+              Category:{' '}
+            </Typography>
+          </Grid>
+          <Grid item md={9}>
+            <Typography>{foundBook?.category}</Typography>
+          </Grid>
+          {/* language */}
+          <Grid item md={3}>
+            <Typography
+              component='h3'
+              variant='body1'
+              sx={{ fontWeight: 'bold' }}
+            >
+              Language:{' '}
+            </Typography>
+          </Grid>
+          <Grid item md={9}>
+            <Typography>
+              {foundBook?.language.map((lang, index) => (
+                <Button
+                  key={index}
+                  variant='outlined'
+                  size='small'
+                  sx={{ margin: '0 5px 5px 0' }}
+                >
+                  {lang}
+                </Button>
+              ))}
+            </Typography>
+          </Grid>
+          {/* quantity */}
+          <Grid item md={3}>
+            <Typography
+              component='h3'
+              variant='body1'
+              sx={{ fontWeight: 'bold' }}
+            >
+              Quantity:{' '}
+            </Typography>
+          </Grid>
+          <Grid item md={9}>
+            <Select value={1} fullWidth size='small'>
+              {Array.from(Array(foundBook?.countInStock).keys()).map(
+                (item, index) => (
+                  <MenuItem key={index + 1} value={item + 1}>
+                    {item + 1}
+                  </MenuItem>
+                )
+              )}
+            </Select>
+          </Grid>
+        </Grid>
       </Grid>
     </Grid>
   );

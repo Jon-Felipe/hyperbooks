@@ -16,7 +16,7 @@ export const dummy_books: BookType[] = [
     language: ['English', 'Spanish', 'Portuguese', 'Italian'],
     publicationDate: '23 Nov 2023',
     vendor: 'Thriftbooks',
-    countInStock: 29,
+    countInStock: 6,
   },
   {
     id: 2,
@@ -33,7 +33,7 @@ export const dummy_books: BookType[] = [
     language: ['English', 'Spanish', 'Portuguese', 'Italian'],
     publicationDate: '23 Nov 2023',
     vendor: 'Thriftbooks',
-    countInStock: 29,
+    countInStock: 6,
   },
   {
     id: 3,
@@ -50,7 +50,7 @@ export const dummy_books: BookType[] = [
     language: ['English', 'Spanish', 'Portuguese', 'Italian'],
     publicationDate: '23 Nov 2023',
     vendor: 'Thriftbooks',
-    countInStock: 29,
+    countInStock: 6,
   },
   {
     id: 4,
@@ -67,7 +67,7 @@ export const dummy_books: BookType[] = [
     language: ['English', 'Spanish', 'Portuguese', 'Italian'],
     publicationDate: '23 Nov 2023',
     vendor: 'Thriftbooks',
-    countInStock: 29,
+    countInStock: 6,
   },
   {
     id: 5,
@@ -84,7 +84,7 @@ export const dummy_books: BookType[] = [
     language: ['English', 'Spanish', 'Portuguese', 'Italian'],
     publicationDate: '23 Nov 2023',
     vendor: 'Thriftbooks',
-    countInStock: 29,
+    countInStock: 6,
   },
   {
     id: 6,
@@ -101,7 +101,7 @@ export const dummy_books: BookType[] = [
     language: ['English', 'Spanish', 'Portuguese', 'Italian'],
     publicationDate: '23 Nov 2023',
     vendor: 'Thriftbooks',
-    countInStock: 29,
+    countInStock: 6,
   },
 ];
 
