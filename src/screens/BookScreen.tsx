@@ -6,6 +6,8 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Rating from '@mui/material/Rating';
 import Button from '@mui/material/Button';
+import ShoppingBasketOutlinedIcon from '@mui/icons-material/ShoppingBasketOutlined';
+import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 
@@ -121,6 +123,29 @@ function BookScreen({}: Props) {
                 )
               )}
             </Select>
+          </Grid>
+        </Grid>
+
+        <Grid container spacing={2} sx={{ marginTop: '10px' }}>
+          <Grid item md={6}>
+            <Button
+              variant='contained'
+              startIcon={<ShoppingBasketOutlinedIcon />}
+              size='large'
+              fullWidth
+            >
+              Add To Cart
+            </Button>
+          </Grid>
+          <Grid item md={6}>
+            <Button
+              variant='outlined'
+              startIcon={<FavoriteBorderOutlinedIcon />}
+              size='large'
+              fullWidth
+            >
+              Add To Wishlist
+            </Button>
           </Grid>
         </Grid>
       </Grid>
