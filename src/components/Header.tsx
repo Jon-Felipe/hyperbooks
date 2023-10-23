@@ -6,6 +6,7 @@ import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import Avatar from '@mui/material/Avatar';
 import Chip from '@mui/material/Chip';
@@ -13,6 +14,7 @@ import Badge from '@mui/material/Badge';
 import DarkModeOutlined from '@mui/icons-material/DarkModeOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import Link from '@mui/material/Link';
+import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 
 type Props = {};
 
@@ -63,12 +65,20 @@ function Header({}: Props) {
               </Badge>
             </IconButton>
           </Box>
-          <Chip
+          {/* <Chip
             avatar={<Avatar>JD</Avatar>}
             label='Hi John Doe'
             variant='outlined'
             clickable
-          />
+          /> */}
+          <Link component={RouterLink} to='/login' underline='none'>
+            <Button
+              startIcon={<PersonOutlineOutlinedIcon />}
+              variant='outlined'
+            >
+              Login
+            </Button>
+          </Link>
         </Toolbar>
       </Container>
     </AppBar>
