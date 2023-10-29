@@ -35,6 +35,10 @@ function BookScreen({}: Props) {
       language,
       quantity,
     };
+    if (!language) {
+      alert('Please choose a language');
+      return;
+    }
     dispatch(addToCart(cartObj));
   };
 
