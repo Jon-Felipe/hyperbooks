@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import { useAppDispatch } from '../utils/hooks';
 import { addToCart } from '../slices/cartSlice';
 
@@ -36,7 +37,7 @@ function BookScreen({}: Props) {
       quantity,
     };
     if (!language) {
-      alert('Please choose a language');
+      toast.error('Please choose a language');
       return;
     }
     dispatch(addToCart(cartObj));
