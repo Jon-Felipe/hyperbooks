@@ -41,6 +41,7 @@ function BookScreen({}: Props) {
       return;
     }
     dispatch(addToCart(cartObj));
+    toast.success('Item added to cart');
   };
 
   return (
