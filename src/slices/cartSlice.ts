@@ -24,7 +24,22 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, { payload }) => {
-      state.cartItems = [...state.cartItems, payload];
+      const { book, language, quantity } = payload;
+
+      const bookExists = state.cartItems.find(
+        (cartItem) => cartItem.book.id == book.id
+      );
+
+      if (bookExists) {
+        state.cartItems = state.cartItems.map((cartItem) =>
+          cartItem.book.id == bookExists.book.id
+            ? { ...bookExists, language, quantity }
+            : cartItem
+        );
+      } else {
+        state.cartItems = [...state.cartItems, payload];
+      }
+      return state;
     },
   },
 });
