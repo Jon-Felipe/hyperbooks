@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 // mui
@@ -18,6 +19,9 @@ import bookImg from '../assets/book2.jpg';
 type Props = {};
 
 function BookScreen({}: Props) {
+  const [language, setLanguage] = useState<string>('');
+  const [quantity, setQuantity] = useState<number>(1);
+
   const { id } = useParams();
 
   const foundBook = dummy_books.find((book) => book.id == Number(id));
@@ -90,18 +94,17 @@ function BookScreen({}: Props) {
             </Typography>
           </Grid>
           <Grid item md={9}>
-            <Typography>
-              {foundBook?.language.map((lang, index) => (
-                <Button
-                  key={index}
-                  variant='outlined'
-                  size='small'
-                  sx={{ margin: '0 5px 5px 0' }}
-                >
-                  {lang}
-                </Button>
-              ))}
-            </Typography>
+            {foundBook?.language.map((lang, index) => (
+              <Button
+                key={index}
+                variant={lang == language ? 'contained' : 'outlined'}
+                size='small'
+                sx={{ margin: '0 5px 5px 0' }}
+                onClick={() => setLanguage(lang)}
+              >
+                {lang}
+              </Button>
+            ))}
           </Grid>
           {/* quantity */}
           <Grid item md={3}>
@@ -114,10 +117,15 @@ function BookScreen({}: Props) {
             </Typography>
           </Grid>
           <Grid item md={9}>
-            <Select value={1} fullWidth size='small'>
+            <Select
+              value={quantity}
+              onChange={(e) => setQuantity(Number(e.target.value))}
+              fullWidth
+              size='small'
+            >
               {Array.from(Array(foundBook?.countInStock).keys()).map(
                 (item, index) => (
-                  <MenuItem key={index + 1} value={item + 1}>
+                  <MenuItem key={index + 1} value={index + 1}>
                     {item + 1}
                   </MenuItem>
                 )
