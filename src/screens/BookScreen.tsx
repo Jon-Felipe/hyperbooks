@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { useAppDispatch } from '../utils/hooks';
+import { addToCart } from '../slices/cartSlice';
 
 // mui
 import Grid from '@mui/material/Grid';
@@ -23,8 +25,18 @@ function BookScreen({}: Props) {
   const [quantity, setQuantity] = useState<number>(1);
 
   const { id } = useParams();
+  const dispatch = useAppDispatch();
 
   const foundBook = dummy_books.find((book) => book.id == Number(id));
+
+  const onAddToCartHandler = () => {
+    const cartObj = {
+      book: foundBook,
+      language,
+      quantity,
+    };
+    dispatch(addToCart(cartObj));
+  };
 
   return (
     <Grid container spacing={4}>
@@ -141,6 +153,7 @@ function BookScreen({}: Props) {
               startIcon={<ShoppingBasketOutlinedIcon />}
               size='large'
               fullWidth
+              onClick={onAddToCartHandler}
             >
               Add To Cart
             </Button>
