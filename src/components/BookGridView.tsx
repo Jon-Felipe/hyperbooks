@@ -7,7 +7,6 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Rating from '@mui/material/Rating';
-import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import Link from '@mui/material/Link';
@@ -78,9 +77,6 @@ function BookGridView() {
                   columnGap: '15px',
                 }}
               >
-                <Button variant='outlined' size='small'>
-                  Add To Cart
-                </Button>
                 <Link component={RouterLink} to={`/book/${book.id}`}>
                   View Book
                 </Link>
