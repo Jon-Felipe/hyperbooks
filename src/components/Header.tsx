@@ -1,4 +1,5 @@
 import { Link as RouterLink } from 'react-router-dom';
+import { useAppSelector } from '../utils/hooks';
 
 // mui
 import AppBar from '@mui/material/AppBar';
@@ -16,9 +17,9 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import Link from '@mui/material/Link';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 
-type Props = {};
+function Header() {
+  const { cartItems } = useAppSelector((state) => state.cart);
 
-function Header({}: Props) {
   return (
     <AppBar position='static' elevation={0} sx={{ bgcolor: '#fff' }}>
       <Container maxWidth='xl'>
@@ -60,7 +61,7 @@ function Header({}: Props) {
               <DarkModeOutlined sx={{ color: '#0e1428' }} />
             </IconButton>
             <IconButton color='primary' sx={{ border: '1px solid #e8e9eb' }}>
-              <Badge badgeContent={0} showZero color='primary'>
+              <Badge badgeContent={cartItems.length} showZero color='primary'>
                 <ShoppingCartOutlinedIcon sx={{ color: '#0e1428' }} />
               </Badge>
             </IconButton>
