@@ -16,6 +16,7 @@ import HomeScreen from './screens/HomeScreen.tsx';
 import BookScreen from './screens/BookScreen.tsx';
 import LoginScreen from './screens/LoginScreen.tsx';
 import RegisterScreen from './screens/RegisterScreen.tsx';
+import CartScreen from './screens/CartScreen.tsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,6 +25,7 @@ const router = createBrowserRouter(
       <Route path='/book/:id' element={<BookScreen />} />
       <Route path='/login' element={<LoginScreen />} />
       <Route path='/register' element={<RegisterScreen />} />
+      <Route path='/cart' element={<CartScreen />} />
     </Route>
   )
 );
