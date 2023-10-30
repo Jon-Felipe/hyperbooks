@@ -1,3 +1,5 @@
+import { useAppSelector } from '../utils/hooks';
+
 // mui
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -12,6 +14,8 @@ import TableRow from '@mui/material/TableRow';
 type Props = {};
 
 function CartSummary({}: Props) {
+  const { cartItems } = useAppSelector((state) => state.cart);
+
   return (
     <Grid container spacing={4} sx={{ marginTop: '20px' }}>
       {/* cart items */}
@@ -28,15 +32,17 @@ function CartSummary({}: Props) {
               </TableRow>
             </TableHead>
             <TableBody>
-              <TableRow>
-                <TableCell component='th' scope='row'>
-                  The Overdue Life of Amy Byler
-                </TableCell>
-                <TableCell>$37.00</TableCell>
-                <TableCell>2</TableCell>
-                <TableCell>$74.00</TableCell>
-                <TableCell>x </TableCell>
-              </TableRow>
+              {cartItems.map((cartItem) => (
+                <TableRow key={cartItem.book.id}>
+                  <TableCell component='th' scope='row'>
+                    {cartItem.book.title}
+                  </TableCell>
+                  <TableCell>${cartItem.book.price}</TableCell>
+                  <TableCell>{cartItem.quantity}</TableCell>
+                  <TableCell>$74.00</TableCell>
+                  <TableCell>x</TableCell>
+                </TableRow>
+              ))}
             </TableBody>
           </Table>
         </TableContainer>

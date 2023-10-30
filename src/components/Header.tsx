@@ -1,4 +1,4 @@
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import { useAppSelector } from '../utils/hooks';
 
 // mui
@@ -19,6 +19,7 @@ import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined
 
 function Header() {
   const { cartItems } = useAppSelector((state) => state.cart);
+  const navigate = useNavigate();
 
   return (
     <AppBar position='static' elevation={0} sx={{ bgcolor: '#fff' }}>
@@ -60,7 +61,11 @@ function Header() {
             <IconButton color='primary' sx={{ border: '1px solid #e8e9eb' }}>
               <DarkModeOutlined sx={{ color: '#0e1428' }} />
             </IconButton>
-            <IconButton color='primary' sx={{ border: '1px solid #e8e9eb' }}>
+            <IconButton
+              color='primary'
+              sx={{ border: '1px solid #e8e9eb' }}
+              onClick={() => navigate('/cart')}
+            >
               <Badge badgeContent={cartItems.length} showZero color='primary'>
                 <ShoppingCartOutlinedIcon sx={{ color: '#0e1428' }} />
               </Badge>
