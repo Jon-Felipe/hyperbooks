@@ -10,6 +10,8 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
+import IconButton from '@mui/material/IconButton';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 type Props = {};
 
@@ -40,7 +42,11 @@ function CartSummary({}: Props) {
                   <TableCell>${cartItem.book.price}</TableCell>
                   <TableCell>{cartItem.quantity}</TableCell>
                   <TableCell>$74.00</TableCell>
-                  <TableCell>x</TableCell>
+                  <TableCell>
+                    <IconButton aria-label='delete'>
+                      <DeleteIcon />
+                    </IconButton>
+                  </TableCell>
                 </TableRow>
               ))}
             </TableBody>
