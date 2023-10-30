@@ -26,10 +26,42 @@ function CartSummary({}: Props) {
           <Table sx={{ minWidth: 650 }}>
             <TableHead>
               <TableRow>
-                <TableCell>Product</TableCell>
-                <TableCell>Price</TableCell>
-                <TableCell>Quantity</TableCell>
-                <TableCell>Subtotal</TableCell>
+                <TableCell
+                  sx={{
+                    fontWeight: 'bold',
+                    fontSize: '16px',
+                    letterSpacing: '1px',
+                  }}
+                >
+                  Product
+                </TableCell>
+                <TableCell
+                  sx={{
+                    fontWeight: 'bold',
+                    fontSize: '16px',
+                    letterSpacing: '1px',
+                  }}
+                >
+                  Price
+                </TableCell>
+                <TableCell
+                  sx={{
+                    fontWeight: 'bold',
+                    fontSize: '16px',
+                    letterSpacing: '1px',
+                  }}
+                >
+                  Quantity
+                </TableCell>
+                <TableCell
+                  sx={{
+                    fontWeight: 'bold',
+                    fontSize: '16px',
+                    letterSpacing: '1px',
+                  }}
+                >
+                  Subtotal
+                </TableCell>
                 <TableCell></TableCell>
               </TableRow>
             </TableHead>
