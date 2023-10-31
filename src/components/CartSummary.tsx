@@ -14,6 +14,9 @@ import TableRow from '@mui/material/TableRow';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import Link from '@mui/material/Link';
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
 
 // extra
 import bookImg from '../assets/book2.jpg';
@@ -155,32 +158,73 @@ function CartSummary({}: Props) {
       </Grid>
       {/* cart total summary */}
       <Grid item md={3}>
-        <Typography component='h3' variant='h5'>
-          Cart Totals
-        </Typography>
-        <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-          <Typography component='h6' variant='body1' sx={{ marginTop: '10px' }}>
-            Subtotal
+        {/* cart totals */}
+        <Box sx={{ borderBottom: '1px solid #efefef', padding: '10px' }}>
+          <Typography component='h3' variant='h6'>
+            Cart Totals
           </Typography>
-          <Typography component='p' variant='body2'>
-            $74.00
-          </Typography>
+          <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+            <Typography
+              component='h6'
+              variant='body2'
+              sx={{ marginTop: '10px' }}
+            >
+              Subtotal
+            </Typography>
+            <Typography component='p' variant='body2'>
+              $74.00
+            </Typography>
+          </Box>
+          <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+            <Typography
+              component='h6'
+              variant='body2'
+              sx={{ marginTop: '10px' }}
+            >
+              Shipping
+            </Typography>
+            <Typography component='p' variant='body2'>
+              Free Shipping
+            </Typography>
+          </Box>
         </Box>
-        <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-          <Typography component='h6' variant='body1' sx={{ marginTop: '10px' }}>
+        {/* shipping */}
+        <Box sx={{ borderBottom: '1px solid #efefef', padding: '10px' }}>
+          <Typography component='h3' variant='h6'>
             Shipping
           </Typography>
-          <Typography component='p' variant='body2'>
-            Free Shipping
-          </Typography>
+          <FormGroup>
+            <FormControlLabel
+              control={<Checkbox defaultChecked size='small' />}
+              label='Free Shipping'
+            />
+            <FormControlLabel
+              control={<Checkbox size='small' />}
+              label='Flat rate: $15'
+            />
+            <FormControlLabel
+              control={<Checkbox size='small' />}
+              label='Local Pickup: $8'
+            />
+          </FormGroup>
         </Box>
-        <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-          <Typography component='h6' variant='body1' sx={{ marginTop: '10px' }}>
+        {/* total */}
+        <Box sx={{ borderBottom: '1px solid #efefef', padding: '10px' }}>
+          <Typography component='h3' variant='h6'>
             Total
           </Typography>
-          <Typography component='p' variant='body2'>
-            $74.00
-          </Typography>
+          <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+            <Typography
+              component='h6'
+              variant='body2'
+              sx={{ marginTop: '10px' }}
+            >
+              Total
+            </Typography>
+            <Typography component='p' variant='body2'>
+              $74.00
+            </Typography>
+          </Box>
         </Box>
       </Grid>
     </Grid>
