@@ -24,7 +24,7 @@ function CartSummary({}: Props) {
   return (
     <Grid container spacing={4} sx={{ marginTop: '20px' }}>
       {/* cart items */}
-      <Grid item md={8}>
+      <Grid item md={9}>
         <TableContainer>
           <Table sx={{ minWidth: 650 }}>
             <TableHead>
@@ -137,7 +137,7 @@ function CartSummary({}: Props) {
         </TableContainer>
       </Grid>
       {/* cart total summary */}
-      <Grid item md={4}>
+      <Grid item md={3}>
         <Typography component='h3' variant='h5'>
           Cart Totals
         </Typography>
