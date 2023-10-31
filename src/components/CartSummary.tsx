@@ -1,4 +1,5 @@
 import { useAppSelector } from '../utils/hooks';
+import { Link as RouterLink } from 'react-router-dom';
 
 // mui
 import Box from '@mui/material/Box';
@@ -12,6 +13,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
+import Link from '@mui/material/Link';
 
 // extra
 import bookImg from '../assets/book2.jpg';
@@ -20,6 +22,21 @@ type Props = {};
 
 function CartSummary({}: Props) {
   const { cartItems } = useAppSelector((state) => state.cart);
+
+  if (cartItems.length == 0) {
+    return (
+      <Box
+        sx={{ display: 'flex', justifyContent: 'center', marginTop: '50px' }}
+      >
+        <Typography>
+          No products found in your cart.{' '}
+          <Link to='/' component={RouterLink}>
+            Browse products
+          </Link>
+        </Typography>
+      </Box>
+    );
+  }
 
   return (
     <Grid container spacing={4} sx={{ marginTop: '20px' }}>
