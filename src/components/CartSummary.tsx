@@ -13,6 +13,9 @@ import TableRow from '@mui/material/TableRow';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 
+// extra
+import bookImg from '../assets/book2.jpg';
+
 type Props = {};
 
 function CartSummary({}: Props) {
@@ -27,37 +30,41 @@ function CartSummary({}: Props) {
             <TableHead>
               <TableRow>
                 <TableCell
+                  align='center'
                   sx={{
-                    fontWeight: 'bold',
                     fontSize: '16px',
                     letterSpacing: '1px',
+                    textTransform: 'uppercase',
                   }}
                 >
-                  Product
+                  Items
                 </TableCell>
                 <TableCell
+                  align='center'
                   sx={{
-                    fontWeight: 'bold',
                     fontSize: '16px',
                     letterSpacing: '1px',
+                    textTransform: 'uppercase',
                   }}
                 >
                   Price
                 </TableCell>
                 <TableCell
+                  align='center'
                   sx={{
-                    fontWeight: 'bold',
                     fontSize: '16px',
                     letterSpacing: '1px',
+                    textTransform: 'uppercase',
                   }}
                 >
                   Quantity
                 </TableCell>
                 <TableCell
+                  align='center'
                   sx={{
-                    fontWeight: 'bold',
                     fontSize: '16px',
                     letterSpacing: '1px',
+                    textTransform: 'uppercase',
                   }}
                 >
                   Subtotal
@@ -69,11 +76,55 @@ function CartSummary({}: Props) {
               {cartItems.map((cartItem) => (
                 <TableRow key={cartItem.book.id}>
                   <TableCell component='th' scope='row'>
-                    {cartItem.book.title}
+                    <Box
+                      sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        columnGap: '20px',
+                      }}
+                    >
+                      <Box
+                        component='img'
+                        src={bookImg}
+                        alt={cartItem.book.title}
+                        sx={{
+                          width: '100px',
+                          height: '120px',
+                          objectFit: 'cover',
+                        }}
+                      />
+                      <Box>
+                        <Typography
+                          variant='body1'
+                          component='h3'
+                          sx={{ fontWeight: '600' }}
+                        >
+                          {cartItem.book.title}
+                        </Typography>
+                        <Typography variant='body2' component='h6'>
+                          Author: {cartItem.book.author}
+                        </Typography>
+                      </Box>
+                    </Box>
                   </TableCell>
-                  <TableCell>${cartItem.book.price}</TableCell>
-                  <TableCell>{cartItem.quantity}</TableCell>
-                  <TableCell>$74.00</TableCell>
+                  <TableCell
+                    align='center'
+                    sx={{ fontSize: '16px', fontWeight: '600' }}
+                  >
+                    ${cartItem.book.price}
+                  </TableCell>
+                  <TableCell
+                    align='center'
+                    sx={{ fontSize: '16px', fontWeight: '600' }}
+                  >
+                    {cartItem.quantity}
+                  </TableCell>
+                  <TableCell
+                    align='center'
+                    sx={{ fontSize: '16px', fontWeight: '600' }}
+                  >
+                    $74.00
+                  </TableCell>
                   <TableCell>
                     <IconButton aria-label='delete'>
                       <DeleteIcon />
