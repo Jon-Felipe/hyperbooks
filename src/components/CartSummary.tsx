@@ -20,6 +20,7 @@ import Checkbox from '@mui/material/Checkbox';
 
 // extra
 import bookImg from '../assets/book2.jpg';
+import { CartItemType } from '../utils/types';
 
 type Props = {};
 
@@ -45,116 +46,7 @@ function CartSummary({}: Props) {
     <Grid container spacing={4} sx={{ marginTop: '20px' }}>
       {/* cart items */}
       <Grid item md={9}>
-        <TableContainer>
-          <Table sx={{ minWidth: 650 }}>
-            <TableHead>
-              <TableRow>
-                <TableCell
-                  align='center'
-                  sx={{
-                    fontSize: '16px',
-                    letterSpacing: '1px',
-                    textTransform: 'uppercase',
-                  }}
-                >
-                  Items
-                </TableCell>
-                <TableCell
-                  align='center'
-                  sx={{
-                    fontSize: '16px',
-                    letterSpacing: '1px',
-                    textTransform: 'uppercase',
-                  }}
-                >
-                  Price
-                </TableCell>
-                <TableCell
-                  align='center'
-                  sx={{
-                    fontSize: '16px',
-                    letterSpacing: '1px',
-                    textTransform: 'uppercase',
-                  }}
-                >
-                  Quantity
-                </TableCell>
-                <TableCell
-                  align='center'
-                  sx={{
-                    fontSize: '16px',
-                    letterSpacing: '1px',
-                    textTransform: 'uppercase',
-                  }}
-                >
-                  Subtotal
-                </TableCell>
-                <TableCell></TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {cartItems.map((cartItem) => (
-                <TableRow key={cartItem.book.id}>
-                  <TableCell component='th' scope='row'>
-                    <Box
-                      sx={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        columnGap: '20px',
-                      }}
-                    >
-                      <Box
-                        component='img'
-                        src={bookImg}
-                        alt={cartItem.book.title}
-                        sx={{
-                          width: '100px',
-                          height: '120px',
-                          objectFit: 'cover',
-                        }}
-                      />
-                      <Box>
-                        <Typography
-                          variant='body1'
-                          component='h3'
-                          sx={{ fontWeight: '600' }}
-                        >
-                          {cartItem.book.title}
-                        </Typography>
-                        <Typography variant='body2' component='h6'>
-                          Author: {cartItem.book.author}
-                        </Typography>
-                      </Box>
-                    </Box>
-                  </TableCell>
-                  <TableCell
-                    align='center'
-                    sx={{ fontSize: '16px', fontWeight: '600' }}
-                  >
-                    ${cartItem.book.price}
-                  </TableCell>
-                  <TableCell
-                    align='center'
-                    sx={{ fontSize: '16px', fontWeight: '600' }}
-                  >
-                    {cartItem.quantity}
-                  </TableCell>
-                  <TableCell
-                    align='center'
-                    sx={{ fontSize: '16px', fontWeight: '600' }}
-                  >
-                    $74.00
-                  </TableCell>
-                  <TableCell>
-                    <IconButton aria-label='delete'>
-                      <DeleteIcon />
-                    </IconButton>
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
+        <CartItemsTable cartItems={cartItems} />
       </Grid>
       {/* cart total summary */}
       <Grid item md={3}>
@@ -232,3 +124,72 @@ function CartSummary({}: Props) {
 }
 
 export default CartSummary;
+
+type CartItemsProps = {
+  cartItems: CartItemType[];
+};
+
+function CartItemsTable({ cartItems }: CartItemsProps) {
+  return (
+    <TableContainer>
+      <Table size='small'>
+        <TableHead>
+          <TableRow>
+            <TableCell></TableCell>
+            <TableCell
+              sx={{ fontSize: '12px', fontWeight: 'bold', color: '#b4b4b4' }}
+            >
+              Product
+            </TableCell>
+            <TableCell
+              sx={{ fontSize: '12px', fontWeight: 'bold', color: '#b4b4b4' }}
+            >
+              Language
+            </TableCell>
+            <TableCell
+              sx={{ fontSize: '12px', fontWeight: 'bold', color: '#b4b4b4' }}
+            >
+              Price
+            </TableCell>
+            <TableCell
+              sx={{ fontSize: '12px', fontWeight: 'bold', color: '#b4b4b4' }}
+            >
+              Quantity
+            </TableCell>
+            <TableCell
+              sx={{ fontSize: '12px', fontWeight: 'bold', color: '#b4b4b4' }}
+            >
+              Subtotal
+            </TableCell>
+            <TableCell></TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {cartItems.map(({ book, quantity, language }) => (
+            <TableRow key={book.id}>
+              <TableCell component='th' scope='row'>
+                <Box
+                  component='img'
+                  src={bookImg}
+                  sx={{ width: '50px', height: '80px', objectFit: 'cover' }}
+                />
+              </TableCell>
+              <TableCell sx={{ letterSpacing: '1px' }}>{book.title}</TableCell>
+              <TableCell sx={{ letterSpacing: '1px' }}>{language}</TableCell>
+              <TableCell sx={{ letterSpacing: '1px' }}>${book.price}</TableCell>
+              <TableCell sx={{ letterSpacing: '1px' }}>{quantity}</TableCell>
+              <TableCell sx={{ letterSpacing: '1px' }}>
+                ${book.price * quantity}
+              </TableCell>
+              <TableCell>
+                <IconButton size='small'>
+                  <DeleteIcon fontSize='small' />
+                </IconButton>
+              </TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+  );
+}
