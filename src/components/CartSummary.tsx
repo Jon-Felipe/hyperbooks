@@ -14,6 +14,11 @@ import TableRow from '@mui/material/TableRow';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import Link from '@mui/material/Link';
+import FormControl from '@mui/material/FormControl';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormLabel from '@mui/material/FormLabel';
+import RadioGroup from '@mui/material/RadioGroup';
+import Radio from '@mui/material/Radio';
 
 // extra
 import bookImg from '../assets/book2.jpg';
@@ -135,7 +140,21 @@ function CartTotalsSummary() {
       </Box>
       {/* shipping */}
       <Box component='div'>
-        <Typography>Shipping</Typography>
+        <FormControl>
+          <FormLabel id='shipping'>Shipping</FormLabel>
+          <RadioGroup aria-labelledby='shipping'>
+            <FormControlLabel
+              value='stadard-rates'
+              control={<Radio size='small' />}
+              label='Standard Rates $3.00'
+            />
+            <FormControlLabel
+              value='pickup'
+              control={<Radio size='small' />}
+              label='Pickup'
+            />
+          </RadioGroup>
+        </FormControl>
       </Box>
       {/* total */}
       <Box component='div'>
