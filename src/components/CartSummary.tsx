@@ -132,14 +132,34 @@ function CartItemsTable({ cartItems }: CartItemsProps) {
 function CartTotalsSummary() {
   return (
     <>
-      <Typography>Cart Totals</Typography>
+      <Typography component='h3' variant='h5'>
+        Cart Totals
+      </Typography>
       {/* subtotals */}
-      <Box component='div'>
-        <Typography>Subtotal</Typography>
+      <Box
+        component='div'
+        sx={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          margin: '10px 0',
+          paddingBottom: '10px',
+          borderBottom: '1px solid #efefef',
+        }}
+      >
+        <Typography component='h6' sx={{ fontWeight: 'bold' }}>
+          Subtotal
+        </Typography>
         <Typography>$130.00</Typography>
       </Box>
       {/* shipping */}
-      <Box component='div'>
+      <Box
+        component='div'
+        sx={{
+          marginBottom: '10px',
+          paddingBottom: '10px',
+          borderBottom: '1px solid #efefef',
+        }}
+      >
         <FormControl>
           <FormLabel id='shipping'>Shipping</FormLabel>
           <RadioGroup aria-labelledby='shipping'>
@@ -157,8 +177,19 @@ function CartTotalsSummary() {
         </FormControl>
       </Box>
       {/* total */}
-      <Box component='div'>
-        <Typography>Total</Typography>
+      <Box
+        component='div'
+        sx={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          marginBottom: '10px',
+          paddingBottom: '10px',
+          borderBottom: '1px solid #efefef',
+        }}
+      >
+        <Typography component='h6' sx={{ fontWeight: 'bold' }}>
+          Total
+        </Typography>
         <Typography>$145.00</Typography>
       </Box>
     </>
