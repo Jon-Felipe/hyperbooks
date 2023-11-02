@@ -21,7 +21,6 @@ import RadioGroup from '@mui/material/RadioGroup';
 import Radio from '@mui/material/Radio';
 
 // extra
-import bookImg from '../assets/book2.jpg';
 import { CartItemType } from '../utils/types';
 
 type Props = {};
@@ -67,10 +66,9 @@ type CartItemsProps = {
 function CartItemsTable({ cartItems }: CartItemsProps) {
   return (
     <TableContainer>
-      <Table size='small'>
+      <Table>
         <TableHead>
           <TableRow>
-            <TableCell></TableCell>
             <TableCell
               sx={{ fontSize: '12px', fontWeight: 'bold', color: '#b4b4b4' }}
             >
@@ -102,14 +100,16 @@ function CartItemsTable({ cartItems }: CartItemsProps) {
         <TableBody>
           {cartItems.map(({ book, quantity, language }) => (
             <TableRow key={book.id}>
-              <TableCell component='th' scope='row'>
-                <Box
-                  component='img'
-                  src={bookImg}
-                  sx={{ width: '50px', height: '80px', objectFit: 'cover' }}
-                />
+              <TableCell
+                component='th'
+                scope='row'
+                sx={{
+                  letterSpacing: '1px',
+                  fontSize: '16px',
+                }}
+              >
+                {book.title}
               </TableCell>
-              <TableCell sx={{ letterSpacing: '1px' }}>{book.title}</TableCell>
               <TableCell sx={{ letterSpacing: '1px' }}>{language}</TableCell>
               <TableCell sx={{ letterSpacing: '1px' }}>${book.price}</TableCell>
               <TableCell sx={{ letterSpacing: '1px' }}>{quantity}</TableCell>
@@ -117,8 +117,8 @@ function CartItemsTable({ cartItems }: CartItemsProps) {
                 ${book.price * quantity}
               </TableCell>
               <TableCell>
-                <IconButton size='small'>
-                  <DeleteIcon fontSize='small' />
+                <IconButton size='small' color='error'>
+                  <DeleteIcon fontSize='small' color='error' />
                 </IconButton>
               </TableCell>
             </TableRow>
