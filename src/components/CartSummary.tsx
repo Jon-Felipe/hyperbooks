@@ -1,5 +1,7 @@
 import { useAppSelector } from '../utils/hooks';
 import { Link as RouterLink } from 'react-router-dom';
+import { useAppDispatch } from '../utils/hooks';
+import { removeFromCart } from '../slices/cartSlice';
 
 // mui
 import Box from '@mui/material/Box';
@@ -64,6 +66,8 @@ type CartItemsProps = {
 };
 
 function CartItemsTable({ cartItems }: CartItemsProps) {
+  const dispatch = useAppDispatch();
+
   return (
     <TableContainer>
       <Table>
@@ -117,7 +121,11 @@ function CartItemsTable({ cartItems }: CartItemsProps) {
                 ${book.price * quantity}
               </TableCell>
               <TableCell>
-                <IconButton size='small' color='error'>
+                <IconButton
+                  size='small'
+                  color='error'
+                  onClick={() => dispatch(removeFromCart({ id: book.id }))}
+                >
                   <DeleteIcon fontSize='small' color='error' />
                 </IconButton>
               </TableCell>
