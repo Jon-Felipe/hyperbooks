@@ -9,6 +9,7 @@ export const dummy_books: BookType[] = [
     image: '',
     category: 'Business & Money',
     rating: 5,
+    numOfReviews: 3714,
     price: 22.0,
     author: 'John Doe',
     authorDetails:
@@ -26,6 +27,7 @@ export const dummy_books: BookType[] = [
     image: '',
     category: 'Literature & Fiction',
     rating: 4,
+    numOfReviews: 2498,
     price: 18.9,
     author: 'John Doe',
     authorDetails:
@@ -43,6 +45,7 @@ export const dummy_books: BookType[] = [
     image: '',
     category: 'Graphic Design',
     rating: 1,
+    numOfReviews: 17,
     price: 20.59,
     author: 'John Doe',
     authorDetails:
@@ -60,6 +63,7 @@ export const dummy_books: BookType[] = [
     image: '',
     category: 'Literature & Fiction',
     rating: 3,
+    numOfReviews: 554,
     price: 9.99,
     author: 'John Doe',
     authorDetails:
@@ -77,6 +81,7 @@ export const dummy_books: BookType[] = [
     image: '',
     category: 'Graphic Design',
     rating: 5,
+    numOfReviews: 185,
     price: 24.91,
     author: 'John Doe',
     authorDetails:
@@ -94,6 +99,7 @@ export const dummy_books: BookType[] = [
     image: '',
     category: 'Graphic Design',
     rating: 2,
+    numOfReviews: 56,
     price: 12.04,
     author: 'John Doe',
     authorDetails:

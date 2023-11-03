@@ -5,6 +5,7 @@ export type BookType = {
   image: string;
   category: string;
   rating: number;
+  numOfReviews: number;
   price: number;
   author: string;
   authorDetails: string;
