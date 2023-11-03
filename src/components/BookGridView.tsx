@@ -70,7 +70,7 @@ function BookGridView() {
                   readOnly
                 />
                 <Typography component='p' variant='body2'>
-                  (3,714)
+                  ({book.numOfReviews})
                 </Typography>
               </Box>
               <CardActions sx={{ columnGap: '5px' }}>
