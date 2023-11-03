@@ -5,6 +5,7 @@ import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
+import CardActions from '@mui/material/CardActions';
 import Typography from '@mui/material/Typography';
 import Rating from '@mui/material/Rating';
 import IconButton from '@mui/material/IconButton';
@@ -20,70 +21,70 @@ function BookGridView() {
   return (
     <Grid container spacing={2}>
       {dummy_books.map((book) => (
-        <Grid key={book.id} item xs={12} md={6}>
-          <Card variant='outlined' sx={{ display: 'flex', height: 200 }}>
+        <Grid key={book.id} item xs={12} sm={6} md={4} lg={3}>
+          <Card variant='outlined'>
             <CardMedia
-              component='img'
+              sx={{ height: 280 }}
               image={bookImg}
-              sx={{ width: 151 }}
-              alt={book.title}
+              title={book.title}
             />
             <CardContent>
               <Typography
-                variant='h6'
                 component='h3'
-                gutterBottom
+                noWrap
                 sx={{
-                  fontSize: '16px',
-                  fontWeight: 'bold',
+                  fontSize: '15px',
                   letterSpacing: '1px',
                 }}
               >
                 {book.title}
               </Typography>
               <Typography
-                variant='body2'
                 component='p'
-                gutterBottom
                 sx={{
-                  color: '#6c757d',
+                  color: '#a9a9a9',
+                  letterSpacing: '1px',
                   fontSize: '12px',
-                }}
-              >
-                {book.category}
-              </Typography>
-              <Rating
-                value={book.rating}
-                size='small'
-                precision={0.5}
-                readOnly
-              />
-              <Typography
-                variant='caption'
-                component='p'
-                sx={{
-                  fontSize: '14px',
                   fontWeight: 'bold',
-                  color: '#38b000',
-                  margin: '5px 0',
                 }}
               >
-                ${book.price.toFixed(2)}
+                {book.author}
+              </Typography>
+              <Typography
+                component='p'
+                sx={{ fontWeight: 'bold', margin: '5px 0' }}
+              >
+                ${book.price}
               </Typography>
               <Box
                 sx={{
                   display: 'flex',
                   alignItems: 'center',
-                  columnGap: '15px',
+                  columnGap: '10px',
                 }}
               >
-                <Link component={RouterLink} to={`/book/${book.id}`}>
+                <Rating
+                  value={book.rating}
+                  size='small'
+                  precision={0.5}
+                  readOnly
+                />
+                <Typography component='p' variant='body2'>
+                  (3,714)
+                </Typography>
+              </Box>
+              <CardActions sx={{ columnGap: '5px' }}>
+                <Link
+                  component={RouterLink}
+                  to={`/book/${book.id}`}
+                  variant='button'
+                >
                   View Book
                 </Link>
-                <IconButton size='small'>
-                  <FavoriteBorderOutlinedIcon fontSize='small' />
+                <IconButton size='small' color='error'>
+                  <FavoriteBorderOutlinedIcon fontSize='small' color='error' />
                 </IconButton>
-              </Box>
+              </CardActions>
             </CardContent>
           </Card>
         </Grid>
