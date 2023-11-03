@@ -9,6 +9,10 @@ import ToggleListButtons from '../components/ToggleListButtons';
 // mui
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+
+// extra
+import { dummy_books } from '../utils/constants';
 
 function HomeScreen() {
   const [bookView, setBookView] = useState<string>('grid');
@@ -37,6 +41,9 @@ function HomeScreen() {
               marginBottom: '20px',
             }}
           >
+            <Typography component='h6' variant='body2'>
+              Showing all {dummy_books.length} results
+            </Typography>
             <ToggleListButtons
               value={bookView}
               onChange={handleOnToggleBookViewChange}
