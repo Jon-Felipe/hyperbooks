@@ -5,7 +5,6 @@ import SideFilters from '../components/SideFilters';
 import BookGridView from '../components/BookGridView';
 import BookListView from '../components/BookListView';
 import ToggleListButtons from '../components/ToggleListButtons';
-import DiscoverLinks from '../components/DiscoverLinks';
 
 // mui
 import Grid from '@mui/material/Grid';
@@ -38,7 +37,6 @@ function HomeScreen() {
               marginBottom: '20px',
             }}
           >
-            <DiscoverLinks />
             <ToggleListButtons
               value={bookView}
               onChange={handleOnToggleBookViewChange}
