@@ -47,20 +47,38 @@ function SideFilters({}: Props) {
         </AccordionSummary>
         <AccordionDetails>
           {popularBooks.map((book) => (
-            <Typography
+            <Box
               key={book.id}
-              component='p'
               sx={{
-                fontSize: '12px',
-                fontWeight: 'bold',
-                letterSpacing: '1px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
                 marginBottom: '10px',
-                color: '#a9a9a9',
               }}
-              onClick={() => console.log('popular books')}
             >
-              {book.name}
-            </Typography>
+              <Typography
+                component='p'
+                sx={{
+                  fontSize: '12px',
+                  fontWeight: 'bold',
+                  letterSpacing: '1px',
+                  color: '#333',
+                }}
+                onClick={() => console.log('popular books')}
+              >
+                {book.name}
+              </Typography>
+              <Typography
+                component='p'
+                sx={{
+                  fontSize: '12px',
+                  fontWeight: 'bold',
+                  color: '#a9a9a9',
+                }}
+              >
+                {book.amount}
+              </Typography>
+            </Box>
           ))}
         </AccordionDetails>
       </Accordion>
