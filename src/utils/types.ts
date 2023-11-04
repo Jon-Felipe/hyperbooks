@@ -21,6 +21,11 @@ export type BookCategoryType = {
   amount: number;
 };
 
+export type BookLanguageType = {
+  id: number;
+  name: string;
+};
+
 export type CartItemType = {
   book: BookType;
   quantity: number;

@@ -1,4 +1,4 @@
-import { BookCategoryType, BookType } from './types';
+import { BookCategoryType, BookLanguageType, BookType } from './types';
 
 export const dummy_books: BookType[] = [
   {
@@ -136,5 +136,28 @@ export const popularBooks: BookCategoryType[] = [
     id: 5,
     name: 'Parenting & families',
     amount: 7,
+  },
+];
+
+export const bookLanguages: BookLanguageType[] = [
+  {
+    id: 1,
+    name: 'English',
+  },
+  {
+    id: 2,
+    name: 'German',
+  },
+  {
+    id: 3,
+    name: 'French',
+  },
+  {
+    id: 4,
+    name: 'Spanish',
+  },
+  {
+    id: 5,
+    name: 'Turkish',
   },
 ];
