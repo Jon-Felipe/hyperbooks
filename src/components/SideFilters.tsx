@@ -10,11 +10,7 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 // extras
-import {
-  popularBooks,
-  fictionBooks,
-  nonFictionBooks,
-} from '../utils/constants';
+import { popularBooks } from '../utils/constants';
 
 type Props = {};
 
@@ -55,72 +51,6 @@ function SideFilters({}: Props) {
                 letterSpacing: '1px',
                 marginBottom: '10px',
                 color: '#a9a9a9',
-              }}
-              onClick={() => console.log('popular books')}
-            >
-              {book.name}
-            </Typography>
-          ))}
-        </AccordionDetails>
-      </Accordion>
-      {/* Fiction filter */}
-      <Accordion>
-        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography
-            variant='h6'
-            component='h3'
-            sx={{ fontSize: '18px', fontWeight: 'bold', letterSpacing: '1px' }}
-          >
-            Fiction
-          </Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          {fictionBooks.map((book) => (
-            <Typography
-              key={book.id}
-              variant='body2'
-              component='button'
-              sx={{
-                display: 'block',
-                bgcolor: 'transparent',
-                border: 'none',
-                cursor: 'pointer',
-                color: '#6c757d',
-                letterSpacing: '1px',
-                margin: '5px 0',
-              }}
-              onClick={() => console.log('popular books')}
-            >
-              {book.name}
-            </Typography>
-          ))}
-        </AccordionDetails>
-      </Accordion>
-      {/* Non-Fiction filter */}
-      <Accordion sx={{ marginTop: '20px' }}>
-        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography
-            variant='h6'
-            component='h3'
-            sx={{ fontSize: '18px', fontWeight: 'bold', letterSpacing: '1px' }}
-          >
-            Non-Fiction
-          </Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          {nonFictionBooks.map((book) => (
-            <Typography
-              key={book.id}
-              variant='body2'
-              component='button'
-              sx={{
-                display: 'block',
-                bgcolor: 'transparent',
-                border: 'none',
-                cursor: 'pointer',
-                color: '#6c757d',
-                letterSpacing: '1px',
-                margin: '5px 0',
               }}
               onClick={() => console.log('popular books')}
             >
