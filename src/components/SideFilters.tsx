@@ -34,31 +34,27 @@ function SideFilters({}: Props) {
           ),
         }}
       />
-      {/* Popular filter */}
+      {/* Category filter */}
       <Accordion sx={{ margin: '20px 0' }}>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
           <Typography
-            variant='h6'
             component='h3'
-            sx={{ fontSize: '18px', fontWeight: 'bold', letterSpacing: '1px' }}
+            sx={{ fontSize: '16px', fontWeight: 'bold', letterSpacing: '1px' }}
           >
-            Popular Books
+            Categories
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
           {popularBooks.map((book) => (
             <Typography
               key={book.id}
-              variant='body2'
-              component='button'
+              component='p'
               sx={{
-                display: 'block',
-                bgcolor: 'transparent',
-                border: 'none',
-                cursor: 'pointer',
-                color: '#6c757d',
+                fontSize: '12px',
+                fontWeight: 'bold',
                 letterSpacing: '1px',
-                margin: '5px 0',
+                marginBottom: '10px',
+                color: '#a9a9a9',
               }}
               onClick={() => console.log('popular books')}
             >
