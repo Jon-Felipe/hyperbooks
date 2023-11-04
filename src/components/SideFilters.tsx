@@ -101,7 +101,7 @@ function SideFilters({}: Props) {
               <FormControlLabel
                 key={bookLang.id}
                 control={<Checkbox size='small' />}
-                label={bookLang.name}
+                label={bookLang.language}
               />
             ))}
           </FormGroup>

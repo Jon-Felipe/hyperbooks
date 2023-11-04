@@ -142,22 +142,22 @@ export const popularBooks: BookCategoryType[] = [
 export const bookLanguages: BookLanguageType[] = [
   {
     id: 1,
-    name: 'English',
+    language: 'English',
   },
   {
     id: 2,
-    name: 'German',
+    language: 'German',
   },
   {
     id: 3,
-    name: 'French',
+    language: 'French',
   },
   {
     id: 4,
-    name: 'Spanish',
+    language: 'Spanish',
   },
   {
     id: 5,
-    name: 'Turkish',
+    language: 'Turkish',
   },
 ];
