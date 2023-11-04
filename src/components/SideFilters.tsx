@@ -1,5 +1,5 @@
 // mui
-import Paper from '@mui/material/Paper';
+import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
 import Accordion from '@mui/material/Accordion';
@@ -16,7 +16,7 @@ type Props = {};
 
 function SideFilters({}: Props) {
   return (
-    <Paper sx={{ padding: '20px' }}>
+    <Box component='aside'>
       {/* Search Filter */}
       <TextField
         placeholder='ISBN, Title, Author...'
@@ -59,7 +59,7 @@ function SideFilters({}: Props) {
           ))}
         </AccordionDetails>
       </Accordion>
-    </Paper>
+    </Box>
   );
 }
 
