@@ -115,21 +115,26 @@ export const popularBooks: BookCategoryType[] = [
   {
     id: 1,
     name: 'Biographies & memoirs',
+    amount: 55,
   },
   {
     id: 2,
     name: 'Business & Money',
+    amount: 39,
   },
   {
     id: 3,
     name: "Children's books",
+    amount: 22,
   },
   {
     id: 4,
     name: 'Computers & technology',
+    amount: 13,
   },
   {
     id: 5,
     name: 'Parenting & families',
+    amount: 7,
   },
 ];
