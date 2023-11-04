@@ -8,9 +8,12 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
 
 // extras
-import { popularBooks } from '../utils/constants';
+import { bookLanguages, popularBooks } from '../utils/constants';
 
 type Props = {};
 
@@ -80,6 +83,28 @@ function SideFilters({}: Props) {
               </Typography>
             </Box>
           ))}
+        </AccordionDetails>
+      </Accordion>
+      {/* Language filter */}
+      <Accordion square disableGutters variant='outlined'>
+        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+          <Typography
+            component='h3'
+            sx={{ fontSize: '16px', fontWeight: 'bold', letterSpacing: '1px' }}
+          >
+            Language
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <FormGroup>
+            {bookLanguages.map((bookLang) => (
+              <FormControlLabel
+                key={bookLang.id}
+                control={<Checkbox size='small' />}
+                label={bookLang.name}
+              />
+            ))}
+          </FormGroup>
         </AccordionDetails>
       </Accordion>
     </Box>
