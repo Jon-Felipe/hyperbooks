@@ -38,6 +38,7 @@ function SideFilters({}: Props) {
         square
         disableGutters
         variant='outlined'
+        defaultExpanded
         sx={{ marginTop: '20px' }}
       >
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
@@ -86,7 +87,7 @@ function SideFilters({}: Props) {
         </AccordionDetails>
       </Accordion>
       {/* Language filter */}
-      <Accordion square disableGutters variant='outlined'>
+      <Accordion square disableGutters variant='outlined' defaultExpanded>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
           <Typography
             component='h3'
