@@ -45,7 +45,7 @@ function HomeScreen() {
             <Typography component='h6' variant='body2'>
               Showing all {dummy_books.length} results
             </Typography>
-            <Box>
+            <Box sx={{ display: 'flex', columnGap: '20px', width: '220px' }}>
               {/* sort selector */}
               <Sort />
               {/* toogle books buttons */}
