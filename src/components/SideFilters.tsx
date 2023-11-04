@@ -31,7 +31,12 @@ function SideFilters({}: Props) {
         }}
       />
       {/* Category filter */}
-      <Accordion square disableGutters sx={{ marginTop: '20px' }}>
+      <Accordion
+        square
+        disableGutters
+        variant='outlined'
+        sx={{ marginTop: '20px' }}
+      >
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
           <Typography
             component='h3'
