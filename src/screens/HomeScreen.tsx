@@ -5,6 +5,7 @@ import SideFilters from '../components/SideFilters';
 import BookGridView from '../components/BookGridView';
 import BookListView from '../components/BookListView';
 import ToggleListButtons from '../components/ToggleListButtons';
+import Sort from '../components/Sort';
 
 // mui
 import Grid from '@mui/material/Grid';
@@ -44,10 +45,15 @@ function HomeScreen() {
             <Typography component='h6' variant='body2'>
               Showing all {dummy_books.length} results
             </Typography>
-            <ToggleListButtons
-              value={bookView}
-              onChange={handleOnToggleBookViewChange}
-            />
+            <Box>
+              {/* sort selector */}
+              <Sort />
+              {/* toogle books buttons */}
+              <ToggleListButtons
+                value={bookView}
+                onChange={handleOnToggleBookViewChange}
+              />
+            </Box>
           </Box>
           {bookView == 'grid' ? (
             <BookGridView />
