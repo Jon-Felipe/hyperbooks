@@ -25,21 +25,26 @@ function BookListView({}: Props) {
         <Grid item key={book.id} xs={12}>
           <Card
             variant='outlined'
-            sx={{ display: 'flex', height: { xs: 200, lg: 220 } }}
+            sx={{
+              display: { sm: 'flex' },
+              padding: '20px',
+            }}
           >
             <CardMedia
               component='img'
               image={bookImg}
-              sx={{ width: { xs: 150, lg: 250 } }}
+              title={book.title}
               alt={book.title}
+              sx={{
+                display: { xs: 'none', sm: 'block' },
+                width: 200,
+              }}
             />
             <CardContent>
               <Typography
-                variant='h4'
                 component='h3'
-                gutterBottom
                 sx={{
-                  fontSize: { xs: '14px', lg: '24px' },
+                  fontSize: '16px',
                   fontWeight: 'bold',
                   letterSpacing: '1px',
                 }}
@@ -47,30 +52,37 @@ function BookListView({}: Props) {
                 {book.title}
               </Typography>
               <Typography
-                variant='body2'
                 component='p'
-                gutterBottom
+                sx={{ color: '#a9a9a9', fontSize: '12px', fontWeight: 'bold' }}
+              >
+                {book.author}
+              </Typography>
+              <Typography component='p' variant='body2'>
+                {book.description.slice(0, 300)}...
+              </Typography>
+              <Box
                 sx={{
-                  color: '#6c757d',
-                  fontSize: { xs: '10px', lg: '14px' },
+                  display: 'flex',
+                  alignItems: 'center',
+                  columnGap: '10px',
+                  margin: '10px 0',
                 }}
               >
-                {book.category}
-              </Typography>
-              <Rating
-                value={book.rating}
-                size='medium'
-                precision={0.5}
-                readOnly
-              />
+                <Rating
+                  value={book.rating}
+                  size='small'
+                  precision={0.5}
+                  readOnly
+                />
+                <Typography component='p' variant='body2'>
+                  ({book.numOfReviews})
+                </Typography>
+              </Box>
               <Typography
-                variant='caption'
                 component='p'
                 sx={{
-                  fontSize: { xs: '12px', lg: '16px' },
+                  fontSize: '16px',
                   fontWeight: 'bold',
-                  color: '#38b000',
-                  margin: '5px 0',
                 }}
               >
                 ${book.price.toFixed(2)}
@@ -85,8 +97,8 @@ function BookListView({}: Props) {
                 <Link component={RouterLink} to={`/book/${book.id}`}>
                   View Book
                 </Link>
-                <IconButton>
-                  <FavoriteBorderOutlinedIcon />
+                <IconButton color='error'>
+                  <FavoriteBorderOutlinedIcon color='error' />
                 </IconButton>
               </Box>
             </CardContent>
