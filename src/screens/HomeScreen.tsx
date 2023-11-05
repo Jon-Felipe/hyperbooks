@@ -6,6 +6,7 @@ import BookGridView from '../components/BookGridView';
 import BookListView from '../components/BookListView';
 import ToggleListButtons from '../components/ToggleListButtons';
 import Sort from '../components/Sort';
+import Limit from '../components/Limit';
 
 // mui
 import Grid from '@mui/material/Grid';
@@ -45,9 +46,18 @@ function HomeScreen() {
             <Typography component='h6' variant='body2'>
               Showing all {dummy_books.length} results
             </Typography>
-            <Box sx={{ display: 'flex', columnGap: '20px', width: '220px' }}>
+            <Box
+              sx={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                columnGap: '20px',
+                width: '300px',
+              }}
+            >
               {/* sort selector */}
               <Sort />
+              {/* limit selector */}
+              <Limit />
               {/* toogle books buttons */}
               <ToggleListButtons
                 value={bookView}
