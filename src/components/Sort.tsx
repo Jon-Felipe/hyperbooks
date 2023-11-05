@@ -17,10 +17,10 @@ function Sort({}: Props) {
   return (
     <FormControl variant='standard' fullWidth>
       <Select value={amount} onChange={handleOnAmountChange}>
-        <MenuItem value='latest'>Sort: Latest</MenuItem>
-        <MenuItem value='oldest'>Sort: Oldest</MenuItem>
-        <MenuItem value='a-z'>Sort: A-Z</MenuItem>
-        <MenuItem value='z-a'>Sort: Z-A</MenuItem>
+        <MenuItem value='latest'>Sort Latest</MenuItem>
+        <MenuItem value='oldest'>Sort Oldest</MenuItem>
+        <MenuItem value='a-z'>Sort A-Z</MenuItem>
+        <MenuItem value='z-a'>Sort Z-A</MenuItem>
       </Select>
     </FormControl>
   );

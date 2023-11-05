@@ -51,7 +51,7 @@ function HomeScreen() {
                 display: 'flex',
                 justifyContent: 'space-between',
                 columnGap: '20px',
-                width: '300px',
+                width: '400px',
               }}
             >
               {/* sort selector */}
