@@ -43,7 +43,14 @@ function HomeScreen() {
               marginBottom: '20px',
             }}
           >
-            <Typography component='h6' variant='body2'>
+            <Typography
+              component='h6'
+              sx={{
+                fontSize: '14px',
+                fontWeight: 'bold',
+                letterSpacing: '1px',
+              }}
+            >
               Showing all {dummy_books.length} results
             </Typography>
             <Box
