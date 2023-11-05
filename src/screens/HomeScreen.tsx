@@ -37,35 +37,22 @@ function HomeScreen() {
         <Grid item xs={12} md={9}>
           <Box
             sx={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              marginBottom: '20px',
+              display: { sm: 'flex' },
+              justifyContent: 'flex-end',
+              columnGap: '20px',
+              marginBottom: { sm: '15px' },
             }}
           >
-            <Typography
-              component='h6'
-              sx={{
-                fontSize: '14px',
-                fontWeight: 'bold',
-                letterSpacing: '1px',
-              }}
-            >
-              Showing all {dummy_books.length} results
-            </Typography>
-            <Box
-              sx={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                columnGap: '20px',
-                width: '400px',
-              }}
-            >
-              {/* sort selector */}
+            {/* sort selector */}
+            <Box sx={{ margin: { xs: '15px 0', sm: 0 }, minWidth: '150px' }}>
               <Sort />
-              {/* limit selector */}
+            </Box>
+            {/* limit selector */}
+            <Box sx={{ margin: { xs: '15px 0', sm: 0 }, minWidth: '150px' }}>
               <Limit />
-              {/* toogle books buttons */}
+            </Box>
+            {/* toogle books buttons */}
+            <Box sx={{ margin: { xs: '15px 0', sm: 0 } }}>
               <ToggleListButtons
                 value={bookView}
                 onChange={handleOnToggleBookViewChange}
