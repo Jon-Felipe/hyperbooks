@@ -11,10 +11,6 @@ import Limit from '../components/Limit';
 // mui
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-
-// extra
-import { dummy_books } from '../utils/constants';
 
 function HomeScreen() {
   const [bookView, setBookView] = useState<string>('grid');
