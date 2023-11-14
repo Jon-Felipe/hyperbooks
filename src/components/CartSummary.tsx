@@ -119,7 +119,7 @@ function CartItemsTable({ cartItems }: CartItemsProps) {
               <TableCell sx={{ letterSpacing: '1px' }}>${book.price}</TableCell>
               <TableCell sx={{ letterSpacing: '1px' }}>{quantity}</TableCell>
               <TableCell sx={{ letterSpacing: '1px' }}>
-                ${book.price * quantity}
+                ${(book.price * quantity).toFixed(2)}
               </TableCell>
               <TableCell>
                 <IconButton
