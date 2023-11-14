@@ -144,21 +144,40 @@ function CartTotalsSummary() {
       <Typography component='h3' variant='h5'>
         Cart Totals
       </Typography>
-      {/* subtotals */}
       <Box
-        component='div'
         sx={{
-          display: 'flex',
-          justifyContent: 'space-between',
           margin: '10px 0',
           paddingBottom: '10px',
           borderBottom: '1px solid #efefef',
         }}
       >
-        <Typography component='h6' sx={{ fontWeight: 'bold' }}>
-          Subtotal
-        </Typography>
-        <Typography>$130.00</Typography>
+        {/* subtotals */}
+        <Box
+          component='div'
+          sx={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            marginBottom: '10px',
+          }}
+        >
+          <Typography component='h6' sx={{ fontWeight: 'bold' }}>
+            Subtotal
+          </Typography>
+          <Typography>$130.00</Typography>
+        </Box>
+        {/* shipping */}
+        <Box
+          component='div'
+          sx={{
+            display: 'flex',
+            justifyContent: 'space-between',
+          }}
+        >
+          <Typography component='h6' sx={{ fontWeight: 'bold' }}>
+            Shipping
+          </Typography>
+          <Typography>Free Shipping</Typography>
+        </Box>
       </Box>
       {/* shipping */}
       <Box
