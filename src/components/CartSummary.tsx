@@ -21,6 +21,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormLabel from '@mui/material/FormLabel';
 import RadioGroup from '@mui/material/RadioGroup';
 import Radio from '@mui/material/Radio';
+import Button from '@mui/material/Button';
 
 // extra
 import { CartItemType } from '../utils/types';
@@ -200,6 +201,9 @@ function CartTotalsSummary() {
         </Typography>
         <Typography>$145.00</Typography>
       </Box>
+      <Button variant='contained' fullWidth>
+        Proceed to checkout
+      </Button>
     </>
   );
 }
