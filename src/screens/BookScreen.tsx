@@ -6,6 +6,7 @@ import { addToCart } from '../slices/cartSlice';
 
 // mui
 import Grid from '@mui/material/Grid';
+import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Rating from '@mui/material/Rating';
@@ -46,37 +47,51 @@ function BookScreen({}: Props) {
 
   return (
     <Grid container spacing={4}>
-      <Grid item xs={12} md={8}>
+      <Grid item md={4}>
         <Box
           component='img'
           src={bookImg}
           alt={foundBook?.title}
-          sx={{ width: '100%' }}
+          sx={{ width: '100%', height: '100%', objectFit: 'cover' }}
         />
       </Grid>
-      <Grid item xs={12} md={4}>
-        <Typography component='h2' variant='h4'>
+      <Grid item md={7}>
+        <Typography component='h2' variant='h5' fontWeight='bold'>
           {foundBook?.title}
         </Typography>
-        <Rating
-          value={foundBook?.rating}
-          precision={0.5}
-          readOnly
-          size='large'
-        />
-        <Typography
-          component='p'
-          variant='body2'
-          sx={{ letterSpacing: '1px', margin: '10px 0' }}
+        <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            columnGap: '10px',
+            margin: '5px 0',
+          }}
         >
-          About the Author: {foundBook?.authorDetails}
-        </Typography>
-        <Typography component='p' variant='h5'>
+          <Box
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              columnGap: '10px',
+            }}
+          >
+            <Rating value={foundBook?.rating} precision={0.5} readOnly />
+            <Typography component='p' variant='body2'>
+              ({foundBook?.numOfReviews})
+            </Typography>
+          </Box>
+          <Typography component='p' variant='body2'>
+            By (author) {foundBook?.author}
+          </Typography>
+        </Box>
+        <Typography component='p' variant='h6' marginBottom='5px'>
           ${foundBook?.price.toFixed(2)}
         </Typography>
-        <Grid container spacing={2} sx={{ marginTop: '10px' }}>
+        <Typography component='p' variant='body2'>
+          {foundBook?.description}
+        </Typography>
+        <Grid container spacing={1} sx={{ marginTop: '5px' }}>
           {/* vendor */}
-          <Grid item md={3}>
+          <Grid item md={3} lg={2}>
             <Typography
               component='h3'
               variant='body1'
@@ -85,11 +100,13 @@ function BookScreen({}: Props) {
               Vendor:{' '}
             </Typography>
           </Grid>
-          <Grid item md={9}>
-            <Typography>{foundBook?.vendor}</Typography>
+          <Grid item md={9} lg={10}>
+            <Typography component='p' variant='body2'>
+              {foundBook?.vendor}
+            </Typography>
           </Grid>
           {/* category */}
-          <Grid item md={3}>
+          <Grid item md={3} lg={2}>
             <Typography
               component='h3'
               variant='body1'
@@ -98,11 +115,13 @@ function BookScreen({}: Props) {
               Category:{' '}
             </Typography>
           </Grid>
-          <Grid item md={9}>
-            <Typography>{foundBook?.category}</Typography>
+          <Grid item md={9} lg={10}>
+            <Typography component='p' variant='body2'>
+              {foundBook?.category}
+            </Typography>
           </Grid>
           {/* language */}
-          <Grid item md={3}>
+          <Grid item md={3} lg={2}>
             <Typography
               component='h3'
               variant='body1'
@@ -111,21 +130,22 @@ function BookScreen({}: Props) {
               Language:{' '}
             </Typography>
           </Grid>
-          <Grid item md={9}>
-            {foundBook?.language.map((lang, index) => (
-              <Button
-                key={index}
-                variant={lang == language ? 'contained' : 'outlined'}
-                size='small'
-                sx={{ margin: '0 5px 5px 0' }}
-                onClick={() => setLanguage(lang)}
-              >
-                {lang}
-              </Button>
-            ))}
+          <Grid item md={9} lg={10}>
+            <Stack direction='row' spacing={1}>
+              {foundBook?.language.map((lang, index) => (
+                <Button
+                  key={index}
+                  variant={lang == language ? 'contained' : 'outlined'}
+                  size='small'
+                  onClick={() => setLanguage(lang)}
+                >
+                  {lang}
+                </Button>
+              ))}
+            </Stack>
           </Grid>
           {/* quantity */}
-          <Grid item md={3}>
+          <Grid item md={3} lg={2}>
             <Typography
               component='h3'
               variant='body1'
@@ -134,7 +154,7 @@ function BookScreen({}: Props) {
               Quantity:{' '}
             </Typography>
           </Grid>
-          <Grid item md={9}>
+          <Grid item md={9} lg={10}>
             <Select
               value={quantity}
               onChange={(e) => setQuantity(Number(e.target.value))}
