@@ -20,7 +20,7 @@ function CartScreen({}: Props) {
         {/* stepper */}
         <CartStepper activeStep={activeStep} steps={steps} />
         {/* cart summary */}
-        <CartSummary />
+        <CartSummary setActiveStep={setActiveStep} />
       </Box>
     </>
   );

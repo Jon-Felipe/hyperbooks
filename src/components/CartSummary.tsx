@@ -26,9 +26,11 @@ import Button from '@mui/material/Button';
 // extra
 import { CartItemType } from '../utils/types';
 
-type Props = {};
+type Props = {
+  setActiveStep: React.Dispatch<React.SetStateAction<number>>;
+};
 
-function CartSummary({}: Props) {
+function CartSummary({ setActiveStep }: Props) {
   const { cartItems } = useAppSelector((state) => state.cart);
 
   if (cartItems.length == 0) {
@@ -54,7 +56,7 @@ function CartSummary({}: Props) {
       </Grid>
       {/* cart total summary */}
       <Grid item md={3} component='section'>
-        <CartTotalsSummary />
+        <CartTotalsSummary setActiveStep={setActiveStep} />
       </Grid>
     </Grid>
   );
@@ -140,7 +142,11 @@ function CartItemsTable({ cartItems }: CartItemsProps) {
   );
 }
 
-function CartTotalsSummary() {
+type CartTotalsSummaryProps = {
+  setActiveStep: React.Dispatch<React.SetStateAction<number>>;
+};
+
+function CartTotalsSummary({ setActiveStep }: CartTotalsSummaryProps) {
   return (
     <>
       <Typography component='h3' variant='h5'>
@@ -222,7 +228,7 @@ function CartTotalsSummary() {
         </Typography>
         <Typography>$145.00</Typography>
       </Box>
-      <Button variant='contained' fullWidth>
+      <Button variant='contained' fullWidth onClick={() => setActiveStep(1)}>
         Proceed to checkout
       </Button>
     </>
