@@ -8,11 +8,14 @@ export type BookType = {
   numOfReviews: number;
   price: number;
   author: string;
-  authorDetails: string;
   language: string[];
+  publisher: string;
   publicationDate: string;
+  publicationCityCountry: string;
   vendor: string;
   countInStock: number;
+  format: string;
+  dimensions: string;
 };
 
 export type BookCategoryType = {
