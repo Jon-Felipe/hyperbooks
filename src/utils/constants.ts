@@ -12,8 +12,6 @@ export const dummy_books: BookType[] = [
     numOfReviews: 3714,
     price: 22.0,
     author: 'John Doe',
-    authorDetails:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consectetur facilis adipisci nihil commodi voluptate odio animi incidunt numquam repellendus cum fugiat, aut amet modi esse veritatis earum obcaecati. Repudiandae harum vel sint deleniti perferendis.',
     language: ['English', 'Spanish', 'Portuguese', 'Italian'],
     publicationDate: '23 Nov 2023',
     vendor: 'Thriftbooks',
@@ -30,8 +28,6 @@ export const dummy_books: BookType[] = [
     numOfReviews: 2498,
     price: 18.9,
     author: 'John Doe',
-    authorDetails:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consectetur facilis adipisci nihil commodi voluptate odio animi incidunt numquam repellendus cum fugiat, aut amet modi esse veritatis earum obcaecati. Repudiandae harum vel sint deleniti perferendis.',
     language: ['English', 'Spanish', 'Portuguese', 'Italian'],
     publicationDate: '23 Nov 2023',
     vendor: 'Thriftbooks',
@@ -48,8 +44,6 @@ export const dummy_books: BookType[] = [
     numOfReviews: 17,
     price: 20.59,
     author: 'John Doe',
-    authorDetails:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consectetur facilis adipisci nihil commodi voluptate odio animi incidunt numquam repellendus cum fugiat, aut amet modi esse veritatis earum obcaecati. Repudiandae harum vel sint deleniti perferendis.',
     language: ['English', 'Spanish', 'Portuguese', 'Italian'],
     publicationDate: '23 Nov 2023',
     vendor: 'Thriftbooks',
@@ -66,8 +60,6 @@ export const dummy_books: BookType[] = [
     numOfReviews: 554,
     price: 9.99,
     author: 'John Doe',
-    authorDetails:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consectetur facilis adipisci nihil commodi voluptate odio animi incidunt numquam repellendus cum fugiat, aut amet modi esse veritatis earum obcaecati. Repudiandae harum vel sint deleniti perferendis.',
     language: ['English', 'Spanish', 'Portuguese', 'Italian'],
     publicationDate: '23 Nov 2023',
     vendor: 'Thriftbooks',
@@ -84,8 +76,6 @@ export const dummy_books: BookType[] = [
     numOfReviews: 185,
     price: 24.91,
     author: 'John Doe',
-    authorDetails:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consectetur facilis adipisci nihil commodi voluptate odio animi incidunt numquam repellendus cum fugiat, aut amet modi esse veritatis earum obcaecati. Repudiandae harum vel sint deleniti perferendis.',
     language: ['English', 'Spanish', 'Portuguese', 'Italian'],
     publicationDate: '23 Nov 2023',
     vendor: 'Thriftbooks',
@@ -102,8 +92,6 @@ export const dummy_books: BookType[] = [
     numOfReviews: 56,
     price: 12.04,
     author: 'John Doe',
-    authorDetails:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consectetur facilis adipisci nihil commodi voluptate odio animi incidunt numquam repellendus cum fugiat, aut amet modi esse veritatis earum obcaecati. Repudiandae harum vel sint deleniti perferendis.',
     language: ['English', 'Spanish', 'Portuguese', 'Italian'],
     publicationDate: '23 Nov 2023',
     vendor: 'Thriftbooks',
