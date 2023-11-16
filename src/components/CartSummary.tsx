@@ -113,7 +113,9 @@ function CartItemsTable({ cartItems }: CartItemsProps) {
                   fontSize: '16px',
                 }}
               >
-                {book.title}
+                <Link to={`/book/${book.id}`} component={RouterLink}>
+                  {book.title}
+                </Link>
               </TableCell>
               <TableCell sx={{ letterSpacing: '1px' }}>{language}</TableCell>
               <TableCell sx={{ letterSpacing: '1px' }}>${book.price}</TableCell>
