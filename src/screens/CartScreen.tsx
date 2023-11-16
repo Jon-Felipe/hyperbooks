@@ -3,6 +3,7 @@ import { useState } from 'react';
 // components
 import CartStepper from '../components/CartStepper';
 import CartSummary from '../components/CartSummary';
+import CheckoutAndPay from '../components/CheckoutAndPay';
 
 // mui
 import Box from '@mui/material/Box';
@@ -19,8 +20,11 @@ function CartScreen({}: Props) {
       <Box sx={{ width: '100%' }}>
         {/* stepper */}
         <CartStepper activeStep={activeStep} steps={steps} />
-        {/* cart summary */}
-        <CartSummary setActiveStep={setActiveStep} />
+        {activeStep == 0 ? (
+          <CartSummary setActiveStep={setActiveStep} />
+        ) : (
+          activeStep == 1 && <CheckoutAndPay />
+        )}
       </Box>
     </>
   );
