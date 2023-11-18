@@ -142,6 +142,30 @@ function CheckoutAndPay() {
               />
             </FormControl>
           </Grid>
+          {/* card number */}
+          <Grid item xs={12} md={7}>
+            <FormControl fullWidth>
+              <FormLabel htmlFor='cardNumber'>Card Number</FormLabel>
+              <OutlinedInput
+                id='cardNumber'
+                type='number'
+                name='cardNumber'
+                placeholder='Your Card Number'
+              />
+            </FormControl>
+          </Grid>
+          {/* cvv */}
+          <Grid item xs={12} md={5}>
+            <FormControl fullWidth>
+              <FormLabel htmlFor='cvv'>CVV</FormLabel>
+              <OutlinedInput
+                id='cvv'
+                type='text'
+                name='cvv'
+                placeholder='Card CVV'
+              />
+            </FormControl>
+          </Grid>
         </Grid>
       </Grid>
     </Grid>
