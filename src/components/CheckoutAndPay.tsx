@@ -97,6 +97,18 @@ function CheckoutAndPay() {
               />
             </FormControl>
           </Grid>
+          {/* city */}
+          <Grid item xs={12} md={6}>
+            <FormControl fullWidth>
+              <FormLabel htmlFor='city'>City</FormLabel>
+              <OutlinedInput
+                id='city'
+                type='text'
+                name='city'
+                placeholder='Your City'
+              />
+            </FormControl>
+          </Grid>
         </Grid>
       </Grid>
       <Grid item xs={12} md={6}>
