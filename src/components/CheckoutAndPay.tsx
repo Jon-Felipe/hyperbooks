@@ -150,7 +150,7 @@ function CheckoutAndPay() {
                 id='cardNumber'
                 type='number'
                 name='cardNumber'
-                placeholder='Your Card Number'
+                placeholder='Card Number'
               />
             </FormControl>
           </Grid>
@@ -163,6 +163,30 @@ function CheckoutAndPay() {
                 type='text'
                 name='cvv'
                 placeholder='Card CVV'
+              />
+            </FormControl>
+          </Grid>
+          {/* card month */}
+          <Grid item xs={12} md={6}>
+            <FormControl fullWidth>
+              <FormLabel htmlFor='cardMonth'>Card Month</FormLabel>
+              <OutlinedInput
+                id='cardMonth'
+                type='text'
+                name='cardMonth'
+                placeholder='Card Month'
+              />
+            </FormControl>
+          </Grid>
+          {/* card year */}
+          <Grid item xs={12} md={6}>
+            <FormControl fullWidth>
+              <FormLabel htmlFor='cardYear'>Card Year</FormLabel>
+              <OutlinedInput
+                id='cardYear'
+                type='number'
+                name='cardYear'
+                placeholder='Card Year'
               />
             </FormControl>
           </Grid>
