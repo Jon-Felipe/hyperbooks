@@ -4,6 +4,8 @@ import Typography from '@mui/material/Typography';
 import FormControl from '@mui/material/FormControl';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import FormLabel from '@mui/material/FormLabel';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
 
 function CheckoutAndPay() {
   return (
@@ -191,6 +193,11 @@ function CheckoutAndPay() {
             </FormControl>
           </Grid>
         </Grid>
+        <Box marginTop='15px'>
+          <Button variant='contained' size='large' fullWidth>
+            Place Order
+          </Button>
+        </Box>
       </Grid>
     </Grid>
   );
