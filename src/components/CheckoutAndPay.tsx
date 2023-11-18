@@ -73,6 +73,30 @@ function CheckoutAndPay() {
               />
             </FormControl>
           </Grid>
+          {/* country */}
+          <Grid item xs={12} md={6}>
+            <FormControl fullWidth>
+              <FormLabel htmlFor='country'>Country</FormLabel>
+              <OutlinedInput
+                id='country'
+                type='text'
+                name='country'
+                placeholder='Your Country'
+              />
+            </FormControl>
+          </Grid>
+          {/* postal code */}
+          <Grid item xs={12} md={6}>
+            <FormControl fullWidth>
+              <FormLabel htmlFor='postalcode'>Postal Code</FormLabel>
+              <OutlinedInput
+                id='postalcode'
+                type='text'
+                name='postalcode'
+                placeholder='Your Postal Code'
+              />
+            </FormControl>
+          </Grid>
         </Grid>
       </Grid>
       <Grid item xs={12} md={6}>
