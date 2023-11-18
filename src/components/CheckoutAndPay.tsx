@@ -109,6 +109,20 @@ function CheckoutAndPay() {
               />
             </FormControl>
           </Grid>
+          {/* notes */}
+          <Grid item xs={12}>
+            <FormControl fullWidth>
+              <FormLabel htmlFor='notes'>Notes</FormLabel>
+              <OutlinedInput
+                id='notes'
+                type='text'
+                name='notes'
+                placeholder='Your Notes'
+                multiline
+                rows={4}
+              />
+            </FormControl>
+          </Grid>
         </Grid>
       </Grid>
       <Grid item xs={12} md={6}>
