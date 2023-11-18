@@ -37,6 +37,30 @@ function CheckoutAndPay() {
               />
             </FormControl>
           </Grid>
+          {/* email address */}
+          <Grid item xs={12} md={6}>
+            <FormControl fullWidth>
+              <FormLabel htmlFor='email'>Email Address</FormLabel>
+              <OutlinedInput
+                id='email'
+                type='text'
+                name='email'
+                placeholder='Your Email Address'
+              />
+            </FormControl>
+          </Grid>
+          {/* phone number */}
+          <Grid item xs={12} md={6}>
+            <FormControl fullWidth>
+              <FormLabel htmlFor='phone'>Phone Number</FormLabel>
+              <OutlinedInput
+                id='phone'
+                type='number'
+                name='phone'
+                placeholder='Your Phone Number'
+              />
+            </FormControl>
+          </Grid>
         </Grid>
       </Grid>
       <Grid item xs={12} md={6}>
