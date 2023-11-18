@@ -21,7 +21,7 @@ function CheckoutAndPay() {
                 id='firstName'
                 type='text'
                 name='firstName'
-                placeholder='Your First Name'
+                placeholder='First Name'
               />
             </FormControl>
           </Grid>
@@ -33,7 +33,7 @@ function CheckoutAndPay() {
                 id='lastName'
                 type='text'
                 name='lastName'
-                placeholder='Your Last Name'
+                placeholder='Last Name'
               />
             </FormControl>
           </Grid>
@@ -45,7 +45,7 @@ function CheckoutAndPay() {
                 id='email'
                 type='text'
                 name='email'
-                placeholder='Your Email Address'
+                placeholder='Email Address'
               />
             </FormControl>
           </Grid>
@@ -57,7 +57,7 @@ function CheckoutAndPay() {
                 id='phone'
                 type='number'
                 name='phone'
-                placeholder='Your Phone Number'
+                placeholder='Phone Number'
               />
             </FormControl>
           </Grid>
@@ -69,7 +69,7 @@ function CheckoutAndPay() {
                 id='address'
                 type='text'
                 name='address'
-                placeholder='Your Address'
+                placeholder='Home/Work Address'
               />
             </FormControl>
           </Grid>
@@ -81,7 +81,7 @@ function CheckoutAndPay() {
                 id='country'
                 type='text'
                 name='country'
-                placeholder='Your Country'
+                placeholder='Country'
               />
             </FormControl>
           </Grid>
@@ -93,7 +93,7 @@ function CheckoutAndPay() {
                 id='postalcode'
                 type='text'
                 name='postalcode'
-                placeholder='Your Postal Code'
+                placeholder='Postal Code'
               />
             </FormControl>
           </Grid>
@@ -105,7 +105,7 @@ function CheckoutAndPay() {
                 id='city'
                 type='text'
                 name='city'
-                placeholder='Your City'
+                placeholder='City'
               />
             </FormControl>
           </Grid>
@@ -117,7 +117,7 @@ function CheckoutAndPay() {
                 id='notes'
                 type='text'
                 name='notes'
-                placeholder='Your Notes'
+                placeholder='Enter your notes here'
                 multiline
                 rows={4}
               />
@@ -133,12 +133,12 @@ function CheckoutAndPay() {
           {/* name on card */}
           <Grid item xs={12}>
             <FormControl fullWidth>
-              <FormLabel htmlFor='cardName'>Name On Card</FormLabel>
+              <FormLabel htmlFor='cardName'>Card Name</FormLabel>
               <OutlinedInput
                 id='cardName'
                 type='text'
                 name='cardName'
-                placeholder='Name On Your Card'
+                placeholder='Name on back of card'
               />
             </FormControl>
           </Grid>
