@@ -61,6 +61,18 @@ function CheckoutAndPay() {
               />
             </FormControl>
           </Grid>
+          {/* adderss */}
+          <Grid item xs={12}>
+            <FormControl fullWidth>
+              <FormLabel htmlFor='address'>Address</FormLabel>
+              <OutlinedInput
+                id='address'
+                type='text'
+                name='address'
+                placeholder='Your Address'
+              />
+            </FormControl>
+          </Grid>
         </Grid>
       </Grid>
       <Grid item xs={12} md={6}>
