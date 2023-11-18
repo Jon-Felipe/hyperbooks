@@ -126,7 +126,23 @@ function CheckoutAndPay() {
         </Grid>
       </Grid>
       <Grid item xs={12} md={6}>
-        Payment
+        <Typography component='h3' variant='h4' fontWeight='bold'>
+          Payment
+        </Typography>
+        <Grid container spacing={2} sx={{ marginTop: '10px' }}>
+          {/* name on card */}
+          <Grid item xs={12}>
+            <FormControl fullWidth>
+              <FormLabel htmlFor='cardName'>Name On Card</FormLabel>
+              <OutlinedInput
+                id='cardName'
+                type='text'
+                name='cardName'
+                placeholder='Name On Your Card'
+              />
+            </FormControl>
+          </Grid>
+        </Grid>
       </Grid>
     </Grid>
   );
